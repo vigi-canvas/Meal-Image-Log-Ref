@@ -25,7 +25,7 @@ Your output should feel like a friendly check-in from a coach. The insight shoul
 - Reduce Portion (reduce_portion)
 - Increase/Add specific macro (increase_add_macro)
 - Proceed as-is (proceed_as_is)
-- Food Sequencing (food-sequncing) (Suggest a meal eating sequence that will be best for their glucose. Eg:- "Try eating salad first, then take a small break and have the rest")
+- Food Sequencing (food-sequencing) (Suggest a meal eating sequence that will be best for their glucose. Eg:- "Try eating salad first, then take a small break and have the rest")
 - Activity (activity) (Some pre-meal or post-meal activity to control glucose levels)
 - Hydration or Beverage Choices (hydration) (Opting for extra hydration or non-sugary beverages or diluted ACV ~5ml in water)
 - Cautionary Alert (cautionary_alert) (If food choice has chances of causing really significant glucose rise such as more than 120-150 mg/dL rise or chances of peak going beyond 250 mg/dL or so)
@@ -99,40 +99,75 @@ class GeminiAPI:
 
 ### Current Meal Pre-meal Metrics:
 - **3h Pre-meal Average:** {current_meal_metrics.get('avg_glucose_3h_pre', 'N/A')} mg/dL
-- **1h Pre-meal Average:** {current_meal_metrics.get('avg_glucose_1h_pre', 'N/A')} mg/dL
+- **1h Pre-meal Average:** {current_meal_metrics.get('avg_glucose_1h_pre', 'N/A')} mg/dL  
 - **Baseline Glucose (30min avg):** {current_meal_metrics.get('baseline_glucose', 'N/A')} mg/dL
 - **Glucose at Meal Time:** {current_meal_metrics.get('glucose_at_meal_time', 'N/A')} mg/dL
 - **3h Pre-meal CV:** {current_meal_metrics.get('cv_3h_pre_percent', 'N/A')}%
 - **1h Pre-meal CV:** {current_meal_metrics.get('cv_1h_pre_percent', 'N/A')}%
+- **Pre-meal Glucose Trend:** {current_meal_metrics.get('pre_meal_trend_per_5min', 0):+.1f} mg/dL per 5min
 
 ## 📈 Reference Meals from Same Time Slot (Last 7 Days)
-**Total Reference Meals Found:** {current_meal_metrics.get('reference_meal_count', 0)}
+**Total Reference Meals Found:** {len(reference_meals_metrics)}
 
 """
         
-        if reference_meals_metrics and len(reference_meals_metrics) > 0:
-            for i, ref_meal in enumerate(reference_meals_metrics, 1):
-                ref_detail = reference_meal_details[i-1] if i-1 < len(reference_meal_details) else {}
-                
-                return_status = f"{ref_meal.get('return_to_baseline_minutes', 'Did not return')} minutes" if ref_meal.get('return_to_baseline_minutes') else "Did not return to baseline within 3h"
-                
-                markdown += f"""
-### Reference Meal #{i}: {ref_detail.get('meal_name', 'Unknown')}
-**Date/Time:** {ref_meal.get('meal_date', 'Unknown')} at {ref_meal.get('meal_time', 'Unknown')}
+        # ✅ Handle BOTH dataclass objects AND dictionaries
+        for i, ref_meal in enumerate(reference_meals_metrics, 1):
+            meal_detail = reference_meal_details[i-1] if i-1 < len(reference_meal_details) else {}
+            
+            # ✅ Check if it's a dataclass object or dictionary
+            if hasattr(ref_meal, 'meal_date'):  # Dataclass object
+                meal_date = ref_meal.meal_date
+                meal_time = ref_meal.meal_time
+                baseline_glucose = ref_meal.baseline_glucose
+                pre_meal_trend = ref_meal.pre_meal_trend_per_5min
+                peak_glucose = ref_meal.peak_postprandial_glucose
+                time_to_peak = ref_meal.time_to_peak_minutes
+                avg_3h_post = ref_meal.avg_glucose_3h_post
+                return_baseline = ref_meal.return_to_baseline_minutes
+                cv_post = ref_meal.cv_3h_post_percent
+            else:  # Dictionary (from asdict conversion)
+                meal_date = ref_meal.get('meal_date', 'Unknown')
+                meal_time = ref_meal.get('meal_time', 'Unknown')
+                baseline_glucose = ref_meal.get('baseline_glucose', 'N/A')
+                pre_meal_trend = ref_meal.get('pre_meal_trend_per_5min', 0)
+                peak_glucose = ref_meal.get('peak_postprandial_glucose', 'N/A')
+                time_to_peak = ref_meal.get('time_to_peak_minutes', 'N/A')
+                avg_3h_post = ref_meal.get('avg_glucose_3h_post', 'N/A')
+                return_baseline = ref_meal.get('return_to_baseline_minutes', None)
+                cv_post = ref_meal.get('cv_3h_post_percent', 'N/A')
+            
+            # ✅ Safe trend direction calculation
+            trend_direction = ""
+            if isinstance(pre_meal_trend, (int, float)):
+                if pre_meal_trend > 1:
+                    trend_direction = "↗️ Rising"
+                elif pre_meal_trend < -1:
+                    trend_direction = "↘️ Falling"
+                else:
+                    trend_direction = "➡️ Stable"
+            
+            # ✅ Safe return baseline text
+            return_text = "Did not return to baseline within 3h"
+            if return_baseline is not None and isinstance(return_baseline, (int, float)):
+                return_text = f"{return_baseline:.0f} minutes"
+            
+            markdown += f"""
+### Reference Meal #{i}: {meal_detail.get('meal_name', 'Unknown Meal')}
+**Date/Time:** {meal_date} at {meal_time}
 
 **Pre-meal Metrics:**
-- Baseline Glucose: {ref_meal.get('baseline_glucose', 'N/A')} mg/dL
+- Baseline Glucose: {baseline_glucose} mg/dL
+- Pre-meal Trend: {pre_meal_trend:+.1f} mg/dL per 5min {trend_direction}
 
-**Post-meal Impact (3h window):**  
-- Peak Glucose: {ref_meal.get('peak_postprandial_glucose', 'N/A')} mg/dL
-- Time to Peak: {ref_meal.get('time_to_peak_minutes', 'N/A')} minutes
-- 3h Post-meal Average: {ref_meal.get('avg_glucose_3h_post', 'N/A')} mg/dL
-- Return to Baseline: {return_status}
-- **3h Post-meal CV:** {ref_meal.get('cv_3h_post_percent', 'N/A')}%
+**Post-meal Impact (3h window):**
+- Peak Glucose: {peak_glucose} mg/dL
+- Time to Peak: {time_to_peak} minutes
+- 3h Post-meal Average: {avg_3h_post} mg/dL
+- Return to Baseline: {return_text}
+- 3h Post-meal CV: {cv_post}%
 
 """
-        else:
-            markdown += "\n*No reference meals found for this time slot in the last 7 days.*\n"
         
         return markdown
 

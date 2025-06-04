@@ -172,6 +172,57 @@ class CGMMetricsCalculator:
             return cv
         return None
 
+    def _calculate_pre_meal_trend(self, df, meal_time):
+        """
+        Calculate pre-meal glucose trend over 30 minutes
+        Returns: mg/dL per 5-minute interval
+        """
+        try:
+            # Get 30-minute window before meal
+            trend_window_start = meal_time - timedelta(minutes=30)
+            trend_window_end = meal_time
+            
+            trend_df = df[
+                (df['timestamp'] >= trend_window_start) & 
+                (df['timestamp'] <= trend_window_end)
+            ].copy()
+            
+            if len(trend_df) < 2:
+                if self.verbose:
+                    print(f"    ⚠️  Insufficient data for trend calculation")
+                return 0.0
+            
+            # Sort by time
+            trend_df = trend_df.sort_values('timestamp')
+            
+            # Get first and last glucose values
+            first_glucose = trend_df.iloc[0]['glucose']
+            last_glucose = trend_df.iloc[-1]['glucose']
+            
+            # Calculate time difference in minutes
+            time_diff_minutes = (trend_df.iloc[-1]['timestamp'] - trend_df.iloc[0]['timestamp']).total_seconds() / 60
+            
+            if time_diff_minutes == 0:
+                return 0.0
+            
+            # Calculate overall change
+            glucose_change = last_glucose - first_glucose
+            
+            # Convert to mg/dL per 5-minute interval
+            trend_per_5min = (glucose_change / time_diff_minutes) * 5
+            
+            if self.verbose:
+                direction = "↗️ Rising" if trend_per_5min > 1 else "↘️ Falling" if trend_per_5min < -1 else "➡️ Stable"
+                print(f"    📈 Pre-meal trend: {trend_per_5min:+.2f} mg/dL per 5min ({direction})")
+                print(f"        From {first_glucose:.1f} to {last_glucose:.1f} mg/dL over {time_diff_minutes:.1f} minutes")
+            
+            return trend_per_5min
+            
+        except Exception as e:
+            if self.verbose:
+                print(f"    ❌ Error calculating pre-meal trend: {e}")
+            return 0.0
+
     def calculate_meal_metrics(
         self,
         cgm_data,
@@ -229,6 +280,11 @@ class CGMMetricsCalculator:
                 print(f"\n  📊 Finding glucose at meal time:")
             glucose_at_meal = self._get_value_at_time(cgm_df, meal_time)
 
+            # Pre-meal glucose trend (30-min slope)
+            if self.verbose:
+                print(f"\n  📊 Calculating pre-meal glucose trend (30-min):")
+            pre_meal_trend = self._calculate_pre_meal_trend(cgm_df, meal_time)
+
             metrics = {
                 'meal_time': meal_time,
                 'meal_name': meal_name,
@@ -240,6 +296,7 @@ class CGMMetricsCalculator:
                 'cv_1h_pre_percent': round(cv_1h_pre, 2) if cv_1h_pre is not None else None,
                 'baseline_glucose_30min': round(baseline_glucose_30min, 2) if baseline_glucose_30min is not None else None,
                 'glucose_at_meal_time': round(glucose_at_meal, 2) if glucose_at_meal is not None else None,
+                'pre_meal_trend_per_5min': round(pre_meal_trend, 2) if pre_meal_trend is not None else 0.0,
             }
 
             if reference_mode:
@@ -348,6 +405,9 @@ class CGMMetricsCalculator:
                 # Post-meal CV
                 cv_3h_post = self._calculate_cv(post3h_df)
 
+                # Calculate pre-meal trend for reference meal
+                ref_pre_meal_trend = self._calculate_pre_meal_trend(cgm_df, meal_time)
+
                 metrics.update({
                     'avg_glucose_3h_post': round(avg_glucose_3h_post, 2) if avg_glucose_3h_post is not None else None,
                     'glucose_3h_after': round(glucose_3h_after, 2) if glucose_3h_after is not None else None,
@@ -359,6 +419,7 @@ class CGMMetricsCalculator:
                     'min_glucose_post': round(min_glucose_post, 2) if min_glucose_post is not None else None,
                     'rate_of_rise_mg_dl_per_min': round(rate_of_rise, 2) if rate_of_rise is not None else None,
                     'cv_3h_post_percent': round(cv_3h_post, 2) if cv_3h_post is not None else None,
+                    'pre_meal_trend_per_5min': round(ref_pre_meal_trend, 2) if ref_pre_meal_trend is not None else 0.0,
                 })
 
             # Print the complete metrics for this meal
@@ -412,11 +473,12 @@ class CGMMetricsCalculator:
                 ref_metric = ref_metrics[0]
                 meal_time = ref_metric['meal_time']
                 
-                # Create ReferenceMealAnalysis using exact model structure
+                # ✅ Create ReferenceMealAnalysis using @dataclass
                 ref_analysis = ReferenceMealAnalysis(
                     meal_date=meal_time.strftime('%Y-%m-%d'),
                     meal_time=meal_time.strftime('%H:%M'),
                     baseline_glucose=ref_metric.get('baseline_glucose_30min') or 0.0,
+                    pre_meal_trend_per_5min=ref_metric.get('pre_meal_trend_per_5min') or 0.0,
                     peak_postprandial_glucose=ref_metric.get('peak_postprandial_glucose') or 0.0,
                     avg_glucose_3h_post=ref_metric.get('avg_glucose_3h_post') or 0.0,
                     time_to_peak_minutes=ref_metric.get('time_to_peak_minutes') or 0.0,
@@ -426,7 +488,7 @@ class CGMMetricsCalculator:
                 )
                 reference_meal_analyses.append(ref_analysis)
         
-        # Create MealImpactAnalysis using exact model structure
+        # ✅ Create MealImpactAnalysis using @dataclass
         meal_time = current_metrics['meal_time']
         meal_impact = MealImpactAnalysis(
             meal_time=meal_time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -439,10 +501,11 @@ class CGMMetricsCalculator:
             cv_1h_pre_percent=current_metrics.get('cv_1h_pre_percent') or 0.0,
             baseline_glucose=current_metrics.get('baseline_glucose_30min') or 0.0,
             glucose_at_meal_time=current_metrics.get('glucose_at_meal_time') or 0.0,
-            reference_meals=reference_meal_analyses  # List of ReferenceMealAnalysis objects
+            pre_meal_trend_per_5min=current_metrics.get('pre_meal_trend_per_5min') or 0.0,
+            reference_meals=reference_meal_analyses  # ✅ Use proper @dataclass objects
         )
         
         if self.verbose:
-            print(f"✅ Created MealImpactAnalysis with {meal_impact.reference_meal_count} reference meals")
+            print(f"✅ Created MealImpactAnalysis with {len(reference_meal_analyses)} reference meals")
         
         return meal_impact

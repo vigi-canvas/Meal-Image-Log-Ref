@@ -6,12 +6,13 @@ class ReferenceMealAnalysis:
     meal_date: str
     meal_time: str
     baseline_glucose: float
+    pre_meal_trend_per_5min: float  # ✅ NEW: mg/dL per 5 minutes
     peak_postprandial_glucose: float
     avg_glucose_3h_post: float
     time_to_peak_minutes: float
     glucose_variability_post: float
     cv_3h_post_percent: float
-    return_to_baseline_minutes: Union[float, None] = None  # ✅ Default value moved to end
+    return_to_baseline_minutes: Union[float, None] = None
 
 @dataclass
 class MealImpactAnalysis:
@@ -25,11 +26,9 @@ class MealImpactAnalysis:
     cv_1h_pre_percent: float
     baseline_glucose: float
     glucose_at_meal_time: float
-    reference_meal_count: int = 0  # ✅ Default value moved to end
-    reference_meals: Union[List[ReferenceMealAnalysis], None] = None  # ✅ Default value at end
+    pre_meal_trend_per_5min: float  # ✅ NEW: mg/dL per 5 minutes
+    reference_meals: List[ReferenceMealAnalysis]
     
-    def __post_init__(self):
-        if self.reference_meals is not None:
-            self.reference_meal_count = len(self.reference_meals)
-        else:
-            self.reference_meal_count = 0
+    @property
+    def reference_meal_count(self) -> int:
+        return len(self.reference_meals)
