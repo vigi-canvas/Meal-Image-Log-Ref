@@ -4,7 +4,7 @@ from PIL import Image
 from dotenv import load_dotenv
 import os
 import json
-load_dotenv()
+#load_dotenv()
 
 system_prompt = """
 You are a warm, supportive health coach specializing in diabetes and CGM-based food insights.
