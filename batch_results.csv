@@ -1,0 +1,2005 @@
+image_name,processing_date,meal_date,meal_time,meal_type,raw_metrics_json,insights_text,raw_data_passed
+0001fe8a-d122-46ef-a8f5-6b90806936f7.jpeg,2025-06-04 16:06:52,"April 16, 2025",13:00,LUNCH,"{""meal_time"": ""2025-04-16 13:00:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 125.25, ""glucose_3h_back"": 120.67, ""cv_3h_pre_percent"": 11.25, ""avg_glucose_1h_pre"": 116.71, ""cv_1h_pre_percent"": 9.24, ""baseline_glucose"": 108.48, ""glucose_at_meal_time"": 108.99, ""reference_meal_count"": 2, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""12:59"", ""baseline_glucose"": 116.77, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 133.63, ""time_to_peak_minutes"": 105.0, ""glucose_variability_post"": 17.57, ""cv_3h_post_percent"": 13.15, ""return_to_baseline_minutes"": 165.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""12:44"", ""baseline_glucose"": 124.94, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 132.41, ""time_to_peak_minutes"": 120.0, ""glucose_variability_post"": 18.59, ""cv_3h_post_percent"": 14.04, ""return_to_baseline_minutes"": 165.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 25,
+    ""protein_g"": 21,
+    ""fat_g"": 26
+  },
+  ""estimated_calories"": 390,
+  ""core_insight"": ""Hi Neera, this lunch looks like a thoughtful choice with protein-rich paneer and colorful veggies – great for your energy and anemia goal! To support your blood sugar goals, try enjoying your salad (cucumber, carrots, beetroot) and the dry vegetable first, before the paneer curry. This can help manage the glucose response, as we've seen recent lunches peak around 150-160 mg/dL."",
+  ""recommendation"": ""food-sequencing""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 16, 2025 at 13:00  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 108.99 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 125.25 mg/dL
+- **1h Pre-meal Average:** 116.71 mg/dL
+- **Baseline Glucose (30min avg):** 108.48 mg/dL
+- **Glucose at Meal Time:** 108.99 mg/dL
+- **3h Pre-meal CV:** 11.25%
+- **1h Pre-meal CV:** 9.24%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 2
+
+
+### Reference Meal #1: Detected Lunch Meal
+**Date/Time:** 2025-04-16 at 12:59
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 116.77 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 105.0 minutes
+- 3h Post-meal Average: 133.63 mg/dL
+- Return to Baseline: 165.0 minutes
+- **3h Post-meal CV:** 13.15%
+
+
+### Reference Meal #2: Detected Lunch Meal
+**Date/Time:** 2025-04-16 at 12:44
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 124.94 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 120.0 minutes
+- 3h Post-meal Average: 132.41 mg/dL
+- Return to Baseline: 165.0 minutes
+- **3h Post-meal CV:** 14.04%
+
+"
+0000edd8-843d-4e99-8c0b-18643c88e6ed.jpeg,2025-06-04 16:07:05,"April 16, 2025",08:00,BREAKFAST,"{""meal_time"": ""2025-04-16 08:00:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 113.57, ""glucose_3h_back"": 128.28, ""cv_3h_pre_percent"": 8.06, ""avg_glucose_1h_pre"": 113.0, ""cv_1h_pre_percent"": 11.15, ""baseline_glucose"": 121.89, ""glucose_at_meal_time"": 130.53, ""reference_meal_count"": 2, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""07:29"", ""baseline_glucose"": 103.07, ""peak_postprandial_glucose"": 141.67, ""avg_glucose_3h_post"": 129.16, ""time_to_peak_minutes"": 90.0, ""glucose_variability_post"": 11.39, ""cv_3h_post_percent"": 8.82, ""return_to_baseline_minutes"": 165.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""07:14"", ""baseline_glucose"": 105.0, ""peak_postprandial_glucose"": 141.67, ""avg_glucose_3h_post"": 129.48, ""time_to_peak_minutes"": 105.0, ""glucose_variability_post"": 11.93, ""cv_3h_post_percent"": 9.21, ""return_to_baseline_minutes"": 165.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 38,
+    ""protein_g"": 5,
+    ""fat_g"": 15
+  },
+  ""estimated_calories"": 307,
+  ""core_insight"": ""Hi Neera, that dosa looks tasty for breakfast! Your glucose is currently 130 mg/dL. Since dosas are mainly carbohydrates, and your previous similar breakfasts (from a lower start) peaked around 140 mg/dL, consider enjoying a slightly smaller portion this time to help manage the potential rise. Every little adjustment helps!"",
+  ""recommendation"": ""reduce_portion""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 16, 2025 at 08:00  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 130.53 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 113.57 mg/dL
+- **1h Pre-meal Average:** 113.0 mg/dL
+- **Baseline Glucose (30min avg):** 121.89 mg/dL
+- **Glucose at Meal Time:** 130.53 mg/dL
+- **3h Pre-meal CV:** 8.06%
+- **1h Pre-meal CV:** 11.15%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 2
+
+
+### Reference Meal #1: Detected Breakfast Meal
+**Date/Time:** 2025-04-16 at 07:29
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 103.07 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 141.67 mg/dL
+- Time to Peak: 90.0 minutes
+- 3h Post-meal Average: 129.16 mg/dL
+- Return to Baseline: 165.0 minutes
+- **3h Post-meal CV:** 8.82%
+
+
+### Reference Meal #2: Detected Breakfast Meal
+**Date/Time:** 2025-04-16 at 07:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.0 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 141.67 mg/dL
+- Time to Peak: 105.0 minutes
+- 3h Post-meal Average: 129.48 mg/dL
+- Return to Baseline: 165.0 minutes
+- **3h Post-meal CV:** 9.21%
+
+"
+0002ce48-222e-4de4-b477-2951e64b7da4 (1).jpeg,2025-06-04 16:07:47,"April 16, 2025",16:30,LUNCH,"{""meal_time"": ""2025-04-16 16:30:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 136.78, ""glucose_3h_back"": 115.24, ""cv_3h_pre_percent"": 9.54, ""avg_glucose_1h_pre"": 128.28, ""cv_1h_pre_percent"": 7.83, ""baseline_glucose"": 121.41, ""glucose_at_meal_time"": 110.58, ""reference_meal_count"": 1, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 73,
+    ""protein_g"": 18,
+    ""fat_g"": 10
+  },
+  ""estimated_calories"": 454,
+  ""core_insight"": ""Hi Neera, thanks for sharing your lunch of rotis and dal. Your pre-meal glucose of 110 mg/dL is a good starting point! This meal with three rotis (around 73g carbs) is more carb-heavy than your recent lunch that caused a ~50 mg/dL rise, so it might lead to a larger spike (potentially over 100-120 mg/dL), which we want to manage for your HbA1c goal. Would you consider reducing to 1-2 rotis and perhaps adding a kachumber salad?"",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 16, 2025 at 16:30  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 110.58 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 136.78 mg/dL
+- **1h Pre-meal Average:** 128.28 mg/dL
+- **Baseline Glucose (30min avg):** 121.41 mg/dL
+- **Glucose at Meal Time:** 110.58 mg/dL
+- **3h Pre-meal CV:** 9.54%
+- **1h Pre-meal CV:** 7.83%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 1
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0002d961-356e-4d12-a296-e3f237ee27b7.jpeg,2025-06-04 16:07:47,"April 16, 2025",19:30,DINNER,"{""meal_time"": ""2025-04-16 19:30:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 88.74, ""glucose_3h_back"": 110.58, ""cv_3h_pre_percent"": 21.15, ""avg_glucose_1h_pre"": 86.91, ""cv_1h_pre_percent"": 31.8, ""baseline_glucose"": 104.01, ""glucose_at_meal_time"": 88.45, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""18:44"", ""baseline_glucose"": 74.86, ""peak_postprandial_glucose"": 183.08, ""avg_glucose_3h_post"": 125.25, ""time_to_peak_minutes"": 60.0, ""glucose_variability_post"": 39.65, ""cv_3h_post_percent"": 31.65, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""18:29"", ""baseline_glucose"": 78.41, ""peak_postprandial_glucose"": 183.08, ""avg_glucose_3h_post"": 120.03, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 41.46, ""cv_3h_post_percent"": 34.54, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""18:14"", ""baseline_glucose"": 82.28, ""peak_postprandial_glucose"": 183.08, ""avg_glucose_3h_post"": 115.0, ""time_to_peak_minutes"": 90.0, ""glucose_variability_post"": 42.53, ""cv_3h_post_percent"": 36.98, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 4,
+    ""protein_g"": 3,
+    ""fat_g"": 7
+  },
+  ""estimated_calories"": 84,
+  ""core_insight"": ""Hi Neera, it's great you're choosing pistachios with your glucose at a good 88 mg/dL! This low-carb choice should be much gentler on your levels than some past dinners that led to spikes over 100 mg/dL. For a more balanced meal that also supports your iron needs, perhaps you could add a small portion of protein like paneer or a handful of chickpeas?"",
+  ""recommendation"": ""increase_add_macro""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 16, 2025 at 19:30  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 88.45 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 88.74 mg/dL
+- **1h Pre-meal Average:** 86.91 mg/dL
+- **Baseline Glucose (30min avg):** 104.01 mg/dL
+- **Glucose at Meal Time:** 88.45 mg/dL
+- **3h Pre-meal CV:** 21.15%
+- **1h Pre-meal CV:** 31.8%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Detected Dinner Meal
+**Date/Time:** 2025-04-16 at 18:44
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 74.86 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 183.08 mg/dL
+- Time to Peak: 60.0 minutes
+- 3h Post-meal Average: 125.25 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 31.65%
+
+
+### Reference Meal #2: Detected Dinner Meal
+**Date/Time:** 2025-04-16 at 18:29
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 78.41 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 183.08 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 120.03 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 34.54%
+
+
+### Reference Meal #3: Detected Dinner Meal
+**Date/Time:** 2025-04-16 at 18:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 82.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 183.08 mg/dL
+- Time to Peak: 90.0 minutes
+- 3h Post-meal Average: 115.0 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 36.98%
+
+"
+0004d3c0-385c-4888-823e-6e8f3bc356f4.jpeg,2025-06-04 16:08:20,"April 17, 2025",12:30,LUNCH,"{""meal_time"": ""2025-04-17 12:30:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 134.08, ""glucose_3h_back"": 118.36, ""cv_3h_pre_percent"": 15.93, ""avg_glucose_1h_pre"": 147.4, ""cv_1h_pre_percent"": 6.86, ""baseline_glucose"": 141.14, ""glucose_at_meal_time"": 136.95, ""reference_meal_count"": 1, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 58,
+    ""protein_g"": 2.6,
+    ""fat_g"": 0.8
+  },
+  ""estimated_calories"": 229,
+  ""core_insight"": ""Hi Neera, this fruit platter of banana, orange, and apple is a fresh choice! It does pack around 58g of carbohydrates, which, starting from your current 137 mg/dL, could cause a significant glucose spike—potentially over 120 mg/dL. To better support your goal of improving blood sugar, maybe try having just half the banana and adding a few almonds to help balance things out?"",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 17, 2025 at 12:30  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 136.95 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 134.08 mg/dL
+- **1h Pre-meal Average:** 147.4 mg/dL
+- **Baseline Glucose (30min avg):** 141.14 mg/dL
+- **Glucose at Meal Time:** 136.95 mg/dL
+- **3h Pre-meal CV:** 15.93%
+- **1h Pre-meal CV:** 6.86%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 1
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0002f298-6bee-4811-a6e9-0c4e4247642a.jpeg,2025-06-04 16:08:26,"April 17, 2025",07:30,BREAKFAST,"{""meal_time"": ""2025-04-17 07:30:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 88.55, ""glucose_3h_back"": 79.25, ""cv_3h_pre_percent"": 9.85, ""avg_glucose_1h_pre"": 95.61, ""cv_1h_pre_percent"": 1.89, ""baseline_glucose"": 95.06, ""glucose_at_meal_time"": 98.54, ""reference_meal_count"": 1, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 15,
+    ""protein_g"": 3,
+    ""fat_g"": 1
+  },
+  ""estimated_calories"": 80,
+  ""core_insight"": ""Hi Neera, what a refreshing and colorful salad to begin your day! This is a wonderful choice for your blood sugar, likely keeping it very stable. To make this breakfast more complete and help you feel satisfied longer, perhaps add a good protein source like some chickpeas, a small bowl of sprouts, or a boiled egg. This will also support your energy levels and iron absorption. Keep up these great veggie-rich choices!"",
+  ""recommendation"": ""increase_add_macro""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 17, 2025 at 07:30  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 98.54 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 88.55 mg/dL
+- **1h Pre-meal Average:** 95.61 mg/dL
+- **Baseline Glucose (30min avg):** 95.06 mg/dL
+- **Glucose at Meal Time:** 98.54 mg/dL
+- **3h Pre-meal CV:** 9.85%
+- **1h Pre-meal CV:** 1.89%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 1
+
+
+### Reference Meal #1: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0005c33f-753f-4d02-b5c8-ab8db986b9a2.jpeg,2025-06-04 16:08:53,"April 17, 2025",20:30,DINNER,"{""meal_time"": ""2025-04-17 20:30:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 85.66, ""glucose_3h_back"": 74.61, ""cv_3h_pre_percent"": 12.07, ""avg_glucose_1h_pre"": 73.69, ""cv_1h_pre_percent"": 3.67, ""baseline_glucose"": 72.32, ""glucose_at_meal_time"": 73.26, ""reference_meal_count"": 1, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 1.2,
+    ""protein_g"": 12.6,
+    ""fat_g"": 10.6
+  },
+  ""estimated_calories"": 156,
+  ""core_insight"": ""Hi Neera, those eggs are a wonderful protein choice for dinner, supporting your goals! Your pre-meal glucose is 73 mg/dL, which is a bit on the lower side. To help keep your levels stable and prevent them from dipping further, especially with your insulin, consider adding a small source of healthy carbs, like half an apple or a few whole-grain crackers with your eggs."",
+  ""recommendation"": ""increase_add_macro""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 17, 2025 at 20:30  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 73.26 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 85.66 mg/dL
+- **1h Pre-meal Average:** 73.69 mg/dL
+- **Baseline Glucose (30min avg):** 72.32 mg/dL
+- **Glucose at Meal Time:** 73.26 mg/dL
+- **3h Pre-meal CV:** 12.07%
+- **1h Pre-meal CV:** 3.67%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 1
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+0004f73e-ac44-487a-b7b9-2ca572abf0dc.jpeg,2025-06-04 16:08:57,"April 17, 2025",17:00,DINNER,"{""meal_time"": ""2025-04-17 17:00:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 121.01, ""glucose_3h_back"": 129.57, ""cv_3h_pre_percent"": 23.35, ""avg_glucose_1h_pre"": 88.09, ""cv_1h_pre_percent"": 15.15, ""baseline_glucose"": 77.9, ""glucose_at_meal_time"": 72.38, ""reference_meal_count"": 1, ""reference_meals"": [{""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 38,
+    ""protein_g"": 18,
+    ""fat_g"": 18
+  },
+  ""estimated_calories"": 394,
+  ""core_insight"": ""Hi Neera, this meal with eggs and cucumber looks like a good choice, especially as your current glucose is 72 mg/dL. The eggs provide valuable protein, and to help manage the carbohydrates from the upma for a gentler glucose rise, try eating your cucumber and eggs first. This approach can help keep your levels more stable post-meal."",
+  ""recommendation"": ""food_sequencing""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 17, 2025 at 17:00  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 72.38 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 121.01 mg/dL
+- **1h Pre-meal Average:** 88.09 mg/dL
+- **Baseline Glucose (30min avg):** 77.9 mg/dL
+- **Glucose at Meal Time:** 72.38 mg/dL
+- **3h Pre-meal CV:** 23.35%
+- **1h Pre-meal CV:** 15.15%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 1
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+0005c351-c54b-40d8-a6e0-0c5e1c9e49b1.jpeg,2025-06-04 16:09:31,"April 18, 2025",08:30,BREAKFAST,"{""meal_time"": ""2025-04-18 08:30:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 87.66, ""glucose_3h_back"": 87.76, ""cv_3h_pre_percent"": 8.96, ""avg_glucose_1h_pre"": 97.29, ""cv_1h_pre_percent"": 5.13, ""baseline_glucose"": 100.96, ""glucose_at_meal_time"": 103.97, ""reference_meal_count"": 2, ""reference_meals"": [{""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 43,
+    ""protein_g"": 14,
+    ""fat_g"": 2
+  },
+  ""estimated_calories"": 246,
+  ""core_insight"": ""Hi Neera, this lobia salad is a wonderful breakfast choice, packed with fiber, protein, and iron to help with your anemia! It's quite similar to your moong chilla that led to a gentle ~33 mg/dL rise, so this should also be kind to your sugars. If you feel up to it, a short walk after your meal can further help manage your levels today."",
+  ""recommendation"": ""activity""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 18, 2025 at 08:30  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 103.97 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 87.66 mg/dL
+- **1h Pre-meal Average:** 97.29 mg/dL
+- **Baseline Glucose (30min avg):** 100.96 mg/dL
+- **Glucose at Meal Time:** 103.97 mg/dL
+- **3h Pre-meal CV:** 8.96%
+- **1h Pre-meal CV:** 5.13%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 2
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #2: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0005d062-e4df-4a0e-90a3-8119493a4130.jpeg,2025-06-04 16:09:40,"April 18, 2025",11:00,BREAKFAST,"{""meal_time"": ""2025-04-18 11:00:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 128.18, ""glucose_3h_back"": 94.84, ""cv_3h_pre_percent"": 13.45, ""avg_glucose_1h_pre"": 147.45, ""cv_1h_pre_percent"": 4.07, ""baseline_glucose"": 151.26, ""glucose_at_meal_time"": 150.14, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 45,
+    ""protein_g"": 8,
+    ""fat_g"": 10
+  },
+  ""estimated_calories"": 302,
+  ""core_insight"": ""Hi Neera, I see Dalia Upma for breakfast. With your starting glucose at 150 mg/dL, this carbohydrate-rich meal could cause a significant spike, potentially 70-100 mg/dL or more, pushing your levels quite high. To manage this, please consider reducing the portion significantly today, and perhaps adding some plain yogurt or a few almonds alongside for balance."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 18, 2025 at 11:00  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 150.14 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 128.18 mg/dL
+- **1h Pre-meal Average:** 147.45 mg/dL
+- **Baseline Glucose (30min avg):** 151.26 mg/dL
+- **Glucose at Meal Time:** 150.14 mg/dL
+- **3h Pre-meal CV:** 13.45%
+- **1h Pre-meal CV:** 4.07%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #3: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0006d9a5-d0e8-4afb-9c40-80d748662f32.jpeg,2025-06-04 16:10:15,"April 18, 2025",14:00,LUNCH,"{""meal_time"": ""2025-04-18 14:00:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 108.02, ""glucose_3h_back"": 150.14, ""cv_3h_pre_percent"": 21.91, ""avg_glucose_1h_pre"": 83.48, ""cv_1h_pre_percent"": 6.13, ""baseline_glucose"": 79.69, ""glucose_at_meal_time"": 77.52, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 43,
+    ""protein_g"": 12.5,
+    ""fat_g"": 12.1
+  },
+  ""estimated_calories"": 335,
+  ""core_insight"": ""Hi Neera, great choices with the egg and bhindi! Your glucose is 77 mg/dL. Remember the Jwarichi Bhakri meal caused a 104 mg/dL spike? To manage a similar rise from the rotis, perhaps try one roti today, and enjoy your veggies and egg first for better balance."",
+  ""recommendation"": ""reduce_portion""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 18, 2025 at 14:00  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 77.52 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 108.02 mg/dL
+- **1h Pre-meal Average:** 83.48 mg/dL
+- **Baseline Glucose (30min avg):** 79.69 mg/dL
+- **Glucose at Meal Time:** 77.52 mg/dL
+- **3h Pre-meal CV:** 21.91%
+- **1h Pre-meal CV:** 6.13%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0006de2e-2f56-40b0-9817-8ca34f1f1edf.jpeg,2025-06-04 16:10:25,"April 18, 2025",19:00,DINNER,"{""meal_time"": ""2025-04-18 19:00:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 169.39, ""glucose_3h_back"": 174.42, ""cv_3h_pre_percent"": 18.9, ""avg_glucose_1h_pre"": 131.22, ""cv_1h_pre_percent"": 18.5, ""baseline_glucose"": 112.55, ""glucose_at_meal_time"": 111.01, ""reference_meal_count"": 2, ""reference_meals"": [{""meal_date"": ""2025-04-17"", ""meal_time"": ""20:47"", ""baseline_glucose"": 69.61, ""peak_postprandial_glucose"": 207.93, ""avg_glucose_3h_post"": 149.02, ""time_to_peak_minutes"": 177.0, ""glucose_variability_post"": 39.89, ""cv_3h_post_percent"": 26.77, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 138,
+    ""protein_g"": 23,
+    ""fat_g"": 16
+  },
+  ""estimated_calories"": 750,
+  ""core_insight"": ""Hi Neera! That's a traditional thali you have there with rice, roti, dal, and sabzi. The dal is a nice protein touch! Just a friendly heads-up: this combination is quite high in carbohydrates (around 138g), which could lead to a large glucose spike, similar to the 138 mg/dL rise we saw on April 17th. To help keep your levels steadier, perhaps you could choose either rice or roti and enjoy a smaller portion of it this time?"",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 18, 2025 at 19:00  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 111.01 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 169.39 mg/dL
+- **1h Pre-meal Average:** 131.22 mg/dL
+- **Baseline Glucose (30min avg):** 112.55 mg/dL
+- **Glucose at Meal Time:** 111.01 mg/dL
+- **3h Pre-meal CV:** 18.9%
+- **1h Pre-meal CV:** 18.5%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 2
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-17 at 20:47
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 69.61 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 207.93 mg/dL
+- Time to Peak: 177.0 minutes
+- 3h Post-meal Average: 149.02 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 26.77%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+0006e248-6e31-4d80-b7c3-204a36225c7e.jpeg,2025-06-04 16:10:57,"April 19, 2025",07:00,BREAKFAST,"{""meal_time"": ""2025-04-19 07:00:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 69.52, ""glucose_3h_back"": 63.66, ""cv_3h_pre_percent"": 7.98, ""avg_glucose_1h_pre"": 74.57, ""cv_1h_pre_percent"": 2.68, ""baseline_glucose"": 75.68, ""glucose_at_meal_time"": 77.53, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 95,
+    ""protein_g"": 22,
+    ""fat_g"": 20
+  },
+  ""estimated_calories"": 655,
+  ""core_insight"": ""Hi Neera, great job on your pre-meal glucose of 77 mg/dL! This breakfast with rice, egg, and veggies looks filling. Because a larger portion of white rice can cause a rapid and high glucose spike (potentially over 120-150 mg/dL for this meal), consider reducing the rice significantly and enjoying more of the protein-rich egg and fiber-filled veggies instead."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 19, 2025 at 07:00  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 77.53 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 69.52 mg/dL
+- **1h Pre-meal Average:** 74.57 mg/dL
+- **Baseline Glucose (30min avg):** 75.68 mg/dL
+- **Glucose at Meal Time:** 77.53 mg/dL
+- **3h Pre-meal CV:** 7.98%
+- **1h Pre-meal CV:** 2.68%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #3: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0007d99c-9f60-4701-86b1-792c4aca77c1.jpeg,2025-06-04 16:11:17,"April 19, 2025",13:30,LUNCH,"{""meal_time"": ""2025-04-19 13:30:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 175.88, ""glucose_3h_back"": 104.79, ""cv_3h_pre_percent"": 12.24, ""avg_glucose_1h_pre"": 180.14, ""cv_1h_pre_percent"": 8.59, ""baseline_glucose"": 167.26, ""glucose_at_meal_time"": 162.04, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 86,
+    ""protein_g"": 41,
+    ""fat_g"": 19
+  },
+  ""estimated_calories"": 670,
+  ""core_insight"": ""Hi Neera, it's great you've included protein with your chicken and dal, and fiber from the salad! Your glucose is starting at 162 mg/dL, and with this amount of rice, there's a strong possibility of a significant spike (potentially over 120-150 mg/dL), which we've seen can happen with similar meals. To help manage this, please consider eating your salad and chicken first, then dal, and reducing the rice portion by at least half."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 19, 2025 at 13:30  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 162.04 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 175.88 mg/dL
+- **1h Pre-meal Average:** 180.14 mg/dL
+- **Baseline Glucose (30min avg):** 167.26 mg/dL
+- **Glucose at Meal Time:** 162.04 mg/dL
+- **3h Pre-meal CV:** 12.24%
+- **1h Pre-meal CV:** 8.59%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0007e212-3a38-4c52-b15e-289a0f9b5809.jpeg,2025-06-04 16:11:42,"April 19, 2025",18:00,DINNER,"{""meal_time"": ""2025-04-19 18:00:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 129.17, ""glucose_3h_back"": 150.36, ""cv_3h_pre_percent"": 9.88, ""avg_glucose_1h_pre"": 121.72, ""cv_1h_pre_percent"": 8.84, ""baseline_glucose"": 115.49, ""glucose_at_meal_time"": 103.02, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""20:30"", ""baseline_glucose"": 79.75, ""peak_postprandial_glucose"": 149.13, ""avg_glucose_3h_post"": 133.95, ""time_to_peak_minutes"": 104.0, ""glucose_variability_post"": 14.01, ""cv_3h_post_percent"": 10.46, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""20:47"", ""baseline_glucose"": 69.61, ""peak_postprandial_glucose"": 207.93, ""avg_glucose_3h_post"": 149.02, ""time_to_peak_minutes"": 177.0, ""glucose_variability_post"": 39.89, ""cv_3h_post_percent"": 26.77, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 63,
+    ""protein_g"": 12,
+    ""fat_g"": 14
+  },
+  ""estimated_calories"": 426,
+  ""core_insight"": ""Hi Neera, it's wonderful your pre-meal glucose is 103 mg/dL! With this idli meal, which is high in carbs (~63g), there's a chance for a significant glucose rise, much like when 'nan' recently caused a 138 mg/dL spike. To help manage this, perhaps try enjoying 2 idlis instead of 3 and ensure a good portion of sambar?"",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 19, 2025 at 18:00  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 103.02 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 129.17 mg/dL
+- **1h Pre-meal Average:** 121.72 mg/dL
+- **Baseline Glucose (30min avg):** 115.49 mg/dL
+- **Glucose at Meal Time:** 103.02 mg/dL
+- **3h Pre-meal CV:** 9.88%
+- **1h Pre-meal CV:** 8.84%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Sprouts Salad
+**Date/Time:** 2025-04-18 at 20:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 79.75 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 149.13 mg/dL
+- Time to Peak: 104.0 minutes
+- 3h Post-meal Average: 133.95 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 10.46%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 20:47
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 69.61 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 207.93 mg/dL
+- Time to Peak: 177.0 minutes
+- 3h Post-meal Average: 149.02 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 26.77%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+0007e307-ee5e-4d6d-a83e-39b1a906e7ae.jpeg,2025-06-04 16:12:03,"April 20, 2025",09:00,BREAKFAST,"{""meal_time"": ""2025-04-20 09:00:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 69.59, ""glucose_3h_back"": 74.87, ""cv_3h_pre_percent"": 3.96, ""avg_glucose_1h_pre"": 69.11, ""cv_1h_pre_percent"": 4.96, ""baseline_glucose"": 72.05, ""glucose_at_meal_time"": 72.46, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 11,
+    ""protein_g"": 2,
+    ""fat_g"": 1
+  },
+  ""estimated_calories"": 60,
+  ""core_insight"": ""Hi Neera, it's great you're including fresh veggies! Your pre-meal glucose is 72 mg/dL, and this plate is quite light (around 60 calories, 2g protein). To help keep your sugar levels stable and provide sustained energy, please consider adding a good protein source like 2 boiled eggs, a bowl of sprouts, or about 50-70g of paneer."",
+  ""recommendation"": ""increase_add_macro""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 20, 2025 at 09:00  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 72.46 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 69.59 mg/dL
+- **1h Pre-meal Average:** 69.11 mg/dL
+- **Baseline Glucose (30min avg):** 72.05 mg/dL
+- **Glucose at Meal Time:** 72.46 mg/dL
+- **3h Pre-meal CV:** 3.96%
+- **1h Pre-meal CV:** 4.96%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #3: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0007f0c3-0ac9-4dbb-aedf-ebca62ee2614.jpeg,2025-06-04 16:12:28,"April 20, 2025",12:00,LUNCH,"{""meal_time"": ""2025-04-20 12:00:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 114.46, ""glucose_3h_back"": 72.46, ""cv_3h_pre_percent"": 24.45, ""avg_glucose_1h_pre"": 134.54, ""cv_1h_pre_percent"": 7.21, ""baseline_glucose"": 140.65, ""glucose_at_meal_time"": 140.65, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 68,
+    ""protein_g"": 24,
+    ""fat_g"": 21
+  },
+  ""estimated_calories"": 555,
+  ""core_insight"": ""Hi Neera, it's wonderful to see you including paneer and fresh salad! Your glucose is at 140 mg/dL right now. This meal, especially with the roti and the sweet dish (top-left), is quite carb-heavy (around 68g) and might cause a significant spike, potentially over 150 mg/dL. To help keep your levels steadier, you could try eating the salad and paneer first, and perhaps enjoy smaller portions of the roti and sweet."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 20, 2025 at 12:00  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 140.65 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 114.46 mg/dL
+- **1h Pre-meal Average:** 134.54 mg/dL
+- **Baseline Glucose (30min avg):** 140.65 mg/dL
+- **Glucose at Meal Time:** 140.65 mg/dL
+- **3h Pre-meal CV:** 24.45%
+- **1h Pre-meal CV:** 7.21%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0008eaa7-0457-4c1a-8860-bdf0c5161815.jpeg,2025-06-04 16:12:48,"April 20, 2025",14:30,LUNCH,"{""meal_time"": ""2025-04-20 14:30:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 141.24, ""glucose_3h_back"": 130.62, ""cv_3h_pre_percent"": 11.32, ""avg_glucose_1h_pre"": 122.78, ""cv_1h_pre_percent"": 7.64, ""baseline_glucose"": 116.55, ""glucose_at_meal_time"": 118.26, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 61,
+    ""protein_g"": 14,
+    ""fat_g"": 12
+  },
+  ""estimated_calories"": 425,
+  ""core_insight"": ""Hi Neera, this thali looks like a comforting lunch! The two rotis and kadhi contribute most of the carbs, estimated around 61g. We saw a meal with bhakri recently cause a spike over 100 mg/dL. To help keep your glucose steadier today, perhaps enjoy one roti with more of your baingan sabzi – this small adjustment can really help!"",
+  ""recommendation"": ""reduce_portion""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 20, 2025 at 14:30  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 118.26 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 141.24 mg/dL
+- **1h Pre-meal Average:** 122.78 mg/dL
+- **Baseline Glucose (30min avg):** 116.55 mg/dL
+- **Glucose at Meal Time:** 118.26 mg/dL
+- **3h Pre-meal CV:** 11.32%
+- **1h Pre-meal CV:** 7.64%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0008f15c-0add-4051-b277-700363261df9.jpeg,2025-06-04 16:12:56,"April 20, 2025",18:30,DINNER,"{""meal_time"": ""2025-04-20 18:30:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 182.44, ""glucose_3h_back"": 206.16, ""cv_3h_pre_percent"": 22.64, ""avg_glucose_1h_pre"": 128.17, ""cv_1h_pre_percent"": 16.47, ""baseline_glucose"": 112.06, ""glucose_at_meal_time"": 111.31, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""20:30"", ""baseline_glucose"": 79.75, ""peak_postprandial_glucose"": 149.13, ""avg_glucose_3h_post"": 133.95, ""time_to_peak_minutes"": 104.0, ""glucose_variability_post"": 14.01, ""cv_3h_post_percent"": 10.46, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""20:47"", ""baseline_glucose"": 69.61, ""peak_postprandial_glucose"": 207.93, ""avg_glucose_3h_post"": 149.02, ""time_to_peak_minutes"": 177.0, ""glucose_variability_post"": 39.89, ""cv_3h_post_percent"": 26.77, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 29,
+    ""protein_g"": 10,
+    ""fat_g"": 8
+  },
+  ""estimated_calories"": 224,
+  ""core_insight"": ""Hi Neera, this besan chilla and cucumber look like a thoughtful dinner choice, especially with your glucose starting well at 111 mg/dL! This should be much gentler on your sugars compared to the 'nan' which caused a significant spike recently. To potentially improve your glucose response further, try eating the cucumber slices first before the chilla."",
+  ""recommendation"": ""food-sequencing""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 20, 2025 at 18:30  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 111.31 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 182.44 mg/dL
+- **1h Pre-meal Average:** 128.17 mg/dL
+- **Baseline Glucose (30min avg):** 112.06 mg/dL
+- **Glucose at Meal Time:** 111.31 mg/dL
+- **3h Pre-meal CV:** 22.64%
+- **1h Pre-meal CV:** 16.47%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Sprouts Salad
+**Date/Time:** 2025-04-18 at 20:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 79.75 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 149.13 mg/dL
+- Time to Peak: 104.0 minutes
+- 3h Post-meal Average: 133.95 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 10.46%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 20:47
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 69.61 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 207.93 mg/dL
+- Time to Peak: 177.0 minutes
+- 3h Post-meal Average: 149.02 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 26.77%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+0008febc-a28e-4841-b096-263d7de823c6.jpeg,2025-06-04 16:13:30,"April 21, 2025",08:00,BREAKFAST,"{""meal_time"": ""2025-04-21 08:00:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 76.44, ""glucose_3h_back"": 67.16, ""cv_3h_pre_percent"": 13.73, ""avg_glucose_1h_pre"": 88.74, ""cv_1h_pre_percent"": 8.71, ""baseline_glucose"": 93.15, ""glucose_at_meal_time"": 100.26, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 41,
+    ""protein_g"": 20,
+    ""fat_g"": 22
+  },
+  ""estimated_calories"": 460,
+  ""core_insight"": ""Hi Neera, it's great you've included plenty of protein with your egg, paneer, and curd this morning! That aloo paratha looks tasty, but sometimes starchy foods like potato can cause a quicker glucose rise than your recent moong chilla (which spiked around 33 mg/dL). To help keep your numbers in a good range, perhaps you could try enjoying a slightly smaller portion of the paratha today? Every small adjustment can make a big difference for your goals!"",
+  ""recommendation"": ""reduce_portion""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 21, 2025 at 08:00  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 100.26 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 76.44 mg/dL
+- **1h Pre-meal Average:** 88.74 mg/dL
+- **Baseline Glucose (30min avg):** 93.15 mg/dL
+- **Glucose at Meal Time:** 100.26 mg/dL
+- **3h Pre-meal CV:** 13.73%
+- **1h Pre-meal CV:** 8.71%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #3: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0009bbec-0359-4808-8272-41efab43e2d7.jpeg,2025-06-04 16:13:46,"April 21, 2025",10:30,BREAKFAST,"{""meal_time"": ""2025-04-21 10:30:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 101.86, ""glucose_3h_back"": 84.85, ""cv_3h_pre_percent"": 8.11, ""avg_glucose_1h_pre"": 106.24, ""cv_1h_pre_percent"": 10.33, ""baseline_glucose"": 114.83, ""glucose_at_meal_time"": 116.03, ""reference_meal_count"": 4, ""reference_meals"": [{""meal_date"": ""2025-04-21"", ""meal_time"": ""09:36"", ""baseline_glucose"": 98.9, ""peak_postprandial_glucose"": 136.31, ""avg_glucose_3h_post"": 119.29, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 13.91, ""cv_3h_post_percent"": 11.66, ""return_to_baseline_minutes"": 158.0}, {""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 72,
+    ""protein_g"": 19,
+    ""fat_g"": 24
+  },
+  ""estimated_calories"": 565,
+  ""core_insight"": ""Hi Neera, the palak paneer is a nice choice for protein! This meal, with the aloo sabzi and large roti, is estimated at around 72g carbs and 565 calories. Given your current HbA1c and that this is quite carb-heavy for one meal, it might cause a significant glucose spike, potentially exceeding a 100-120 mg/dL rise from your current 116 mg/dL. Reducing the aloo or roti portion could really help manage this."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 21, 2025 at 10:30  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 116.03 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 101.86 mg/dL
+- **1h Pre-meal Average:** 106.24 mg/dL
+- **Baseline Glucose (30min avg):** 114.83 mg/dL
+- **Glucose at Meal Time:** 116.03 mg/dL
+- **3h Pre-meal CV:** 8.11%
+- **1h Pre-meal CV:** 10.33%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 4
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-21 at 09:36
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 98.9 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 136.31 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 119.29 mg/dL
+- Return to Baseline: 158.0 minutes
+- **3h Post-meal CV:** 11.66%
+
+
+### Reference Meal #2: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #4: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+0009ec1d-fc28-4cd2-9590-7fd88e7ea6d3.jpeg,2025-06-04 16:14:03,"April 21, 2025",13:00,LUNCH,"{""meal_time"": ""2025-04-21 13:00:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 118.85, ""glucose_3h_back"": 95.72, ""cv_3h_pre_percent"": 12.31, ""avg_glucose_1h_pre"": 103.21, ""cv_1h_pre_percent"": 10.37, ""baseline_glucose"": 95.02, ""glucose_at_meal_time"": 93.96, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 18,
+    ""protein_g"": 3,
+    ""fat_g"": 1
+  },
+  ""estimated_calories"": 80,
+  ""core_insight"": ""Hi Neera, this colorful salad looks like a great choice for your lunch, especially with your glucose starting at a good 94 mg/dL! This meal is much lighter in carbs than some previous lunches, like the Dal Khichdi which caused a spike of over 100 mg/dL, so this should be much gentler on your levels. To make it even better for your energy and help with your anemia, how about adding a protein source like some chickpeas, a boiled egg, or a small portion of grilled fish or paneer?"",
+  ""recommendation"": ""increase_add_macro""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 21, 2025 at 13:00  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 93.96 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 118.85 mg/dL
+- **1h Pre-meal Average:** 103.21 mg/dL
+- **Baseline Glucose (30min avg):** 95.02 mg/dL
+- **Glucose at Meal Time:** 93.96 mg/dL
+- **3h Pre-meal CV:** 12.31%
+- **1h Pre-meal CV:** 10.37%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+0009f8e9-7fd8-478c-9d1f-7bec9ea5b339.jpeg,2025-06-04 16:14:38,"April 21, 2025",19:30,DINNER,"{""meal_time"": ""2025-04-21 19:30:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 78.16, ""glucose_3h_back"": 119.2, ""cv_3h_pre_percent"": 25.47, ""avg_glucose_1h_pre"": 76.43, ""cv_1h_pre_percent"": 26.43, ""baseline_glucose"": 91.25, ""glucose_at_meal_time"": 97.53, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""20:30"", ""baseline_glucose"": 79.75, ""peak_postprandial_glucose"": 149.13, ""avg_glucose_3h_post"": 133.95, ""time_to_peak_minutes"": 104.0, ""glucose_variability_post"": 14.01, ""cv_3h_post_percent"": 10.46, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""20:47"", ""baseline_glucose"": 69.61, ""peak_postprandial_glucose"": 207.93, ""avg_glucose_3h_post"": 149.02, ""time_to_peak_minutes"": 177.0, ""glucose_variability_post"": 39.89, ""cv_3h_post_percent"": 26.77, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 44,
+    ""protein_g"": 15,
+    ""fat_g"": 15
+  },
+  ""estimated_calories"": 362,
+  ""core_insight"": ""Hi Neera, it's wonderful your pre-meal glucose is 97 mg/dL! This meal with dhokla and gathiya is quite carb-dense, and the fried gathiya could lead to a sharp rise. We've seen similar carb-rich meals, like 'nan', push your glucose up by over 130mg/dL; this meal might also cause a significant spike (potentially over 120mg/dL). Please consider swapping the gathiya for some cucumber slices or a small salad, and perhaps reducing the dhokla portion a bit, to help manage this."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 21, 2025 at 19:30  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 97.53 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 78.16 mg/dL
+- **1h Pre-meal Average:** 76.43 mg/dL
+- **Baseline Glucose (30min avg):** 91.25 mg/dL
+- **Glucose at Meal Time:** 97.53 mg/dL
+- **3h Pre-meal CV:** 25.47%
+- **1h Pre-meal CV:** 26.43%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Sprouts Salad
+**Date/Time:** 2025-04-18 at 20:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 79.75 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 149.13 mg/dL
+- Time to Peak: 104.0 minutes
+- 3h Post-meal Average: 133.95 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 10.46%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 20:47
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 69.61 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 207.93 mg/dL
+- Time to Peak: 177.0 minutes
+- 3h Post-meal Average: 149.02 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 26.77%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+000a13d9-4e9a-4178-8b2a-e56c0197dd5f.jpeg,2025-06-04 16:15:09,"April 22, 2025",07:30,BREAKFAST,"{""meal_time"": ""2025-04-22 07:30:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 71.65, ""glucose_3h_back"": 91.08, ""cv_3h_pre_percent"": 9.96, ""avg_glucose_1h_pre"": 69.22, ""cv_1h_pre_percent"": 4.46, ""baseline_glucose"": 68.73, ""glucose_at_meal_time"": 74.43, ""reference_meal_count"": 4, ""reference_meals"": [{""meal_date"": ""2025-04-21"", ""meal_time"": ""09:36"", ""baseline_glucose"": 98.9, ""peak_postprandial_glucose"": 136.31, ""avg_glucose_3h_post"": 119.29, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 13.91, ""cv_3h_post_percent"": 11.66, ""return_to_baseline_minutes"": 158.0}, {""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 50,
+    ""protein_g"": 11,
+    ""fat_g"": 10
+  },
+  ""estimated_calories"": 334,
+  ""core_insight"": ""Hi Neera! Good that you're eating with your glucose at 74 mg/dL. While your recent moong chilla (from a higher start of 115mg/dL) had a gentle ~33mg/dL rise, this meal with roti and kadhi has more carbs (~50g), which could cause a more significant spike (potentially over 120mg/dL) given your A1c. Try eating your sabzi first, then the kadhi, and the roti last to help manage this."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 22, 2025 at 07:30  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 74.43 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 71.65 mg/dL
+- **1h Pre-meal Average:** 69.22 mg/dL
+- **Baseline Glucose (30min avg):** 68.73 mg/dL
+- **Glucose at Meal Time:** 74.43 mg/dL
+- **3h Pre-meal CV:** 9.96%
+- **1h Pre-meal CV:** 4.46%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 4
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-21 at 09:36
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 98.9 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 136.31 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 119.29 mg/dL
+- Return to Baseline: 158.0 minutes
+- **3h Post-meal CV:** 11.66%
+
+
+### Reference Meal #2: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #4: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+000a31cc-84d1-47ae-a437-628c11d6c68f.jpeg,2025-06-04 16:15:31,"April 22, 2025",14:00,LUNCH,"{""meal_time"": ""2025-04-22 14:00:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 85.32, ""glucose_3h_back"": 113.59, ""cv_3h_pre_percent"": 21.56, ""avg_glucose_1h_pre"": 60.73, ""cv_1h_pre_percent"": 6.34, ""baseline_glucose"": 57.51, ""glucose_at_meal_time"": 58.61, ""reference_meal_count"": 4, ""reference_meals"": [{""meal_date"": ""2025-04-21"", ""meal_time"": ""13:25"", ""baseline_glucose"": 90.54, ""peak_postprandial_glucose"": 153.23, ""avg_glucose_3h_post"": 124.16, ""time_to_peak_minutes"": 79.0, ""glucose_variability_post"": 24.4, ""cv_3h_post_percent"": 19.65, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 71,
+    ""protein_g"": 16,
+    ""fat_g"": 9
+  },
+  ""estimated_calories"": 425,
+  ""core_insight"": ""Hi Neera, your glucose is very low at 58.61 mg/dL, so please eat your meal now; the roti and chana will provide the necessary carbs. Given this meal's carb content and how we've seen similar meals like dal khichdi cause over a 100 mg/dL rise from a higher starting point, be mindful of a potential sharp increase after your levels recover. Please monitor closely."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 22, 2025 at 14:00  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 58.61 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 85.32 mg/dL
+- **1h Pre-meal Average:** 60.73 mg/dL
+- **Baseline Glucose (30min avg):** 57.51 mg/dL
+- **Glucose at Meal Time:** 58.61 mg/dL
+- **3h Pre-meal CV:** 21.56%
+- **1h Pre-meal CV:** 6.34%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 4
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Shepu Sabji , Wheat Roti
+**Date/Time:** 2025-04-21 at 13:25
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 90.54 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 153.23 mg/dL
+- Time to Peak: 79.0 minutes
+- 3h Post-meal Average: 124.16 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 19.65%
+
+
+### Reference Meal #2: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #4: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+000a83ae-ed02-4f49-b95f-3e1aaf6af62e.jpeg,2025-06-04 16:15:56,"April 23, 2025",09:30,BREAKFAST,"{""meal_time"": ""2025-04-23 09:30:00"", ""meal_name"": ""Live Upload - Breakfast Meal"", ""slot"": ""BREAKFAST"", ""avg_glucose_3h_pre"": 106.32, ""glucose_3h_back"": 52.51, ""cv_3h_pre_percent"": 35.49, ""avg_glucose_1h_pre"": 110.96, ""cv_1h_pre_percent"": 10.51, ""baseline_glucose"": 101.92, ""glucose_at_meal_time"": 98.81, ""reference_meal_count"": 4, ""reference_meals"": [{""meal_date"": ""2025-04-21"", ""meal_time"": ""09:36"", ""baseline_glucose"": 98.9, ""peak_postprandial_glucose"": 136.31, ""avg_glucose_3h_post"": 119.29, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 13.91, ""cv_3h_post_percent"": 11.66, ""return_to_baseline_minutes"": 158.0}, {""meal_date"": ""2025-04-18"", ""meal_time"": ""10:10"", ""baseline_glucose"": 122.63, ""peak_postprandial_glucose"": 152.39, ""avg_glucose_3h_post"": 129.35, ""time_to_peak_minutes"": 34.0, ""glucose_variability_post"": 20.33, ""cv_3h_post_percent"": 15.72, ""return_to_baseline_minutes"": 79.0}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""10:12"", ""baseline_glucose"": 105.99, ""peak_postprandial_glucose"": 160.09, ""avg_glucose_3h_post"": 136.3, ""time_to_peak_minutes"": 62.0, ""glucose_variability_post"": 19.25, ""cv_3h_post_percent"": 14.12, ""return_to_baseline_minutes"": 152.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""10:30"", ""baseline_glucose"": 114.97, ""peak_postprandial_glucose"": 147.59, ""avg_glucose_3h_post"": 123.55, ""time_to_peak_minutes"": 59.0, ""glucose_variability_post"": 15.91, ""cv_3h_post_percent"": 12.88, ""return_to_baseline_minutes"": 104.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 7,
+    ""protein_g"": 1,
+    ""fat_g"": 0
+  },
+  ""estimated_calories"": 30,
+  ""core_insight"": ""Hi Neera, starting your day with cucumber is a refreshing choice and should be very gentle on your glucose levels, especially with your current good reading of 98.81 mg/dL! To make this a more satisfying and nutritious breakfast that supports your energy and helps with your anemia, consider pairing it with a protein-rich food like a couple of eggs or some sprouts. This will provide more sustained energy and nutrients for your day."",
+  ""recommendation"": ""increase_add_macro""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 23, 2025 at 09:30  
+**Meal Type:** BREAKFAST  
+**Pre-meal Glucose Status:** 98.81 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 106.32 mg/dL
+- **1h Pre-meal Average:** 110.96 mg/dL
+- **Baseline Glucose (30min avg):** 101.92 mg/dL
+- **Glucose at Meal Time:** 98.81 mg/dL
+- **3h Pre-meal CV:** 35.49%
+- **1h Pre-meal CV:** 10.51%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 4
+
+
+### Reference Meal #1: nan
+**Date/Time:** 2025-04-21 at 09:36
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 98.9 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 136.31 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 119.29 mg/dL
+- Return to Baseline: 158.0 minutes
+- **3h Post-meal CV:** 11.66%
+
+
+### Reference Meal #2: Misal without Pav
+**Date/Time:** 2025-04-18 at 10:10
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 122.63 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 152.39 mg/dL
+- Time to Peak: 34.0 minutes
+- 3h Post-meal Average: 129.35 mg/dL
+- Return to Baseline: 79.0 minutes
+- **3h Post-meal CV:** 15.72%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-17 at 10:12
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 105.99 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 160.09 mg/dL
+- Time to Peak: 62.0 minutes
+- 3h Post-meal Average: 136.3 mg/dL
+- Return to Baseline: 152.0 minutes
+- **3h Post-meal CV:** 14.12%
+
+
+### Reference Meal #4: Moong Chilla
+**Date/Time:** 2025-04-16 at 10:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 114.97 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 147.59 mg/dL
+- Time to Peak: 59.0 minutes
+- 3h Post-meal Average: 123.55 mg/dL
+- Return to Baseline: 104.0 minutes
+- **3h Post-meal CV:** 12.88%
+
+"
+000a37b5-0259-400b-841e-e21ac6d34f03.jpeg,2025-06-04 16:16:04,"April 22, 2025",20:00,DINNER,"{""meal_time"": ""2025-04-22 20:00:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 92.03, ""glucose_3h_back"": 135.45, ""cv_3h_pre_percent"": 25.81, ""avg_glucose_1h_pre"": 105.46, ""cv_1h_pre_percent"": 24.37, ""baseline_glucose"": 126.24, ""glucose_at_meal_time"": 133.85, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""20:30"", ""baseline_glucose"": 79.75, ""peak_postprandial_glucose"": 149.13, ""avg_glucose_3h_post"": 133.95, ""time_to_peak_minutes"": 104.0, ""glucose_variability_post"": 14.01, ""cv_3h_post_percent"": 10.46, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""20:47"", ""baseline_glucose"": 69.61, ""peak_postprandial_glucose"": 207.93, ""avg_glucose_3h_post"": 149.02, ""time_to_peak_minutes"": 177.0, ""glucose_variability_post"": 39.89, ""cv_3h_post_percent"": 26.77, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 89,
+    ""protein_g"": 17,
+    ""fat_g"": 17
+  },
+  ""estimated_calories"": 565,
+  ""core_insight"": ""Hi Neera, just a friendly heads-up for this meal! Given the rice and fried vegetable, and your current glucose of 133 mg/dL, there's a strong possibility of a significant spike—similar carb-rich meals have sometimes caused rises over 100-130 mg/dL for you. Starting with your cucumber and dal, and perhaps being mindful of the rice portion, could help manage this potential rise."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 22, 2025 at 20:00  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 133.85 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 92.03 mg/dL
+- **1h Pre-meal Average:** 105.46 mg/dL
+- **Baseline Glucose (30min avg):** 126.24 mg/dL
+- **Glucose at Meal Time:** 133.85 mg/dL
+- **3h Pre-meal CV:** 25.81%
+- **1h Pre-meal CV:** 24.37%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Sprouts Salad
+**Date/Time:** 2025-04-18 at 20:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 79.75 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 149.13 mg/dL
+- Time to Peak: 104.0 minutes
+- 3h Post-meal Average: 133.95 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 10.46%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 20:47
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 69.61 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 207.93 mg/dL
+- Time to Peak: 177.0 minutes
+- 3h Post-meal Average: 149.02 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 26.77%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"
+000adfe0-b4f1-4a75-8b46-a62d8ac08018.jpeg,2025-06-04 16:16:50,"April 23, 2025",12:30,LUNCH,"{""meal_time"": ""2025-04-23 12:30:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 100.04, ""glucose_3h_back"": 98.81, ""cv_3h_pre_percent"": 26.36, ""avg_glucose_1h_pre"": 130.52, ""cv_1h_pre_percent"": 3.25, ""baseline_glucose"": 132.38, ""glucose_at_meal_time"": 129.22, ""reference_meal_count"": 4, ""reference_meals"": [{""meal_date"": ""2025-04-21"", ""meal_time"": ""13:25"", ""baseline_glucose"": 90.54, ""peak_postprandial_glucose"": 153.23, ""avg_glucose_3h_post"": 124.16, ""time_to_peak_minutes"": 79.0, ""glucose_variability_post"": 24.4, ""cv_3h_post_percent"": 19.65, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""13:06"", ""baseline_glucose"": 108.48, ""peak_postprandial_glucose"": 157.05, ""avg_glucose_3h_post"": 135.58, ""time_to_peak_minutes"": 98.0, ""glucose_variability_post"": 16.28, ""cv_3h_post_percent"": 12.01, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 69,
+    ""protein_g"": 9,
+    ""fat_g"": 6
+  },
+  ""estimated_calories"": 360,
+  ""core_insight"": ""Hi Neera, it's great you're including a variety of veggies! With your current glucose at 129 mg/dL, the white rice in this meal could cause a significant spike (over 120-150 mg/dL), like we saw with the Dal Khichdi. To manage this, try eating fewer spoonfuls of rice, and enjoy your veggies and curry first."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 23, 2025 at 12:30  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 129.22 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 100.04 mg/dL
+- **1h Pre-meal Average:** 130.52 mg/dL
+- **Baseline Glucose (30min avg):** 132.38 mg/dL
+- **Glucose at Meal Time:** 129.22 mg/dL
+- **3h Pre-meal CV:** 26.36%
+- **1h Pre-meal CV:** 3.25%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 4
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Shepu Sabji , Wheat Roti
+**Date/Time:** 2025-04-21 at 13:25
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 90.54 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 153.23 mg/dL
+- Time to Peak: 79.0 minutes
+- 3h Post-meal Average: 124.16 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 19.65%
+
+
+### Reference Meal #2: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+
+### Reference Meal #4: nan
+**Date/Time:** 2025-04-16 at 13:06
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 108.48 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 157.05 mg/dL
+- Time to Peak: 98.0 minutes
+- 3h Post-meal Average: 135.58 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 12.01%
+
+"
+000b2dac-1ba4-44b8-a8f6-5bdf91276838.jpeg,2025-06-04 16:17:09,"April 23, 2025",15:30,LUNCH,"{""meal_time"": ""2025-04-23 15:30:00"", ""meal_name"": ""Live Upload - Lunch Meal"", ""slot"": ""LUNCH"", ""avg_glucose_3h_pre"": 108.24, ""glucose_3h_back"": 129.22, ""cv_3h_pre_percent"": 27.75, ""avg_glucose_1h_pre"": 74.73, ""cv_1h_pre_percent"": 14.32, ""baseline_glucose"": 66.0, ""glucose_at_meal_time"": 62.46, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-21"", ""meal_time"": ""13:25"", ""baseline_glucose"": 90.54, ""peak_postprandial_glucose"": 153.23, ""avg_glucose_3h_post"": 124.16, ""time_to_peak_minutes"": 79.0, ""glucose_variability_post"": 24.4, ""cv_3h_post_percent"": 19.65, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-18"", ""meal_time"": ""13:40"", ""baseline_glucose"": 87.28, ""peak_postprandial_glucose"": 191.55, ""avg_glucose_3h_post"": 137.05, ""time_to_peak_minutes"": 169.0, ""glucose_variability_post"": 42.32, ""cv_3h_post_percent"": 30.88, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""13:14"", ""baseline_glucose"": 119.84, ""peak_postprandial_glucose"": 162.27, ""avg_glucose_3h_post"": 125.41, ""time_to_peak_minutes"": 75.0, ""glucose_variability_post"": 20.01, ""cv_3h_post_percent"": 15.96, ""return_to_baseline_minutes"": 120.0}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 45,
+    ""protein_g"": 5,
+    ""fat_g"": 6
+  },
+  ""estimated_calories"": 250,
+  ""core_insight"": ""Hi Neera, it's good you're having this meal as your glucose is currently 62 mg/dL and needs to come up. This beetroot rice will help, but since it's primarily rice, which digests quickly, there's a strong possibility of a significant glucose rise, potentially over 120-150 mg/dL. Please monitor your CGM closely after eating."",
+  ""recommendation"": ""cautionary_alert""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 23, 2025 at 15:30  
+**Meal Type:** LUNCH  
+**Pre-meal Glucose Status:** 62.46 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 108.24 mg/dL
+- **1h Pre-meal Average:** 74.73 mg/dL
+- **Baseline Glucose (30min avg):** 66.0 mg/dL
+- **Glucose at Meal Time:** 62.46 mg/dL
+- **3h Pre-meal CV:** 27.75%
+- **1h Pre-meal CV:** 14.32%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Shepu Sabji , Wheat Roti
+**Date/Time:** 2025-04-21 at 13:25
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 90.54 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 153.23 mg/dL
+- Time to Peak: 79.0 minutes
+- 3h Post-meal Average: 124.16 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 19.65%
+
+
+### Reference Meal #2: Dal Khichdi , Jwarichi Bhakri , Mix Veg
+**Date/Time:** 2025-04-18 at 13:40
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 87.28 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 191.55 mg/dL
+- Time to Peak: 169.0 minutes
+- 3h Post-meal Average: 137.05 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 30.88%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-17 at 13:14
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 119.84 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 162.27 mg/dL
+- Time to Peak: 75.0 minutes
+- 3h Post-meal Average: 125.41 mg/dL
+- Return to Baseline: 120.0 minutes
+- **3h Post-meal CV:** 15.96%
+
+"
+000b2f78-e520-4e43-afb8-983d1d21ea13.jpeg,2025-06-04 16:17:38,"April 23, 2025",19:00,DINNER,"{""meal_time"": ""2025-04-23 19:00:00"", ""meal_name"": ""Live Upload - Dinner Meal"", ""slot"": ""DINNER"", ""avg_glucose_3h_pre"": 0.0, ""glucose_3h_back"": 0.0, ""cv_3h_pre_percent"": 0.0, ""avg_glucose_1h_pre"": 0.0, ""cv_1h_pre_percent"": 0.0, ""baseline_glucose"": 0.0, ""glucose_at_meal_time"": 0.0, ""reference_meal_count"": 3, ""reference_meals"": [{""meal_date"": ""2025-04-18"", ""meal_time"": ""20:30"", ""baseline_glucose"": 79.75, ""peak_postprandial_glucose"": 149.13, ""avg_glucose_3h_post"": 133.95, ""time_to_peak_minutes"": 104.0, ""glucose_variability_post"": 14.01, ""cv_3h_post_percent"": 10.46, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-17"", ""meal_time"": ""20:47"", ""baseline_glucose"": 69.61, ""peak_postprandial_glucose"": 207.93, ""avg_glucose_3h_post"": 149.02, ""time_to_peak_minutes"": 177.0, ""glucose_variability_post"": 39.89, ""cv_3h_post_percent"": 26.77, ""return_to_baseline_minutes"": null}, {""meal_date"": ""2025-04-16"", ""meal_time"": ""21:21"", ""baseline_glucose"": 134.59, ""peak_postprandial_glucose"": 185.55, ""avg_glucose_3h_post"": 151.54, ""time_to_peak_minutes"": 113.0, ""glucose_variability_post"": 22.1, ""cv_3h_post_percent"": 14.58, ""return_to_baseline_minutes"": null}]}","```json
+{
+  ""meal_macros"": {
+    ""carbohydrates_g"": 92,
+    ""protein_g"": 39,
+    ""fat_g"": 21
+  },
+  ""estimated_calories"": 713,
+  ""core_insight"": ""Hi Neera, this thali looks quite wholesome with good protein from the egg, dals, and soybean, plus fresh cucumber! That's a great start. With around 92g of carbs in this meal, mainly from the two rotis and dals, there's a good chance for a significant glucose spike, perhaps similar to the 138 mg/dL rise we saw recently after a carb-rich meal. To help manage this, would you consider having just one roti and enjoying your veggies, egg, and protein dishes first?"",
+  ""recommendation"": ""reduce_portion""
+}
+```","
+## 📊 Current Meal Being Analyzed
+**Meal Time:** April 23, 2025 at 19:00  
+**Meal Type:** DINNER  
+**Pre-meal Glucose Status:** 0.0 mg/dL
+
+### Current Meal Pre-meal Metrics:
+- **3h Pre-meal Average:** 0.0 mg/dL
+- **1h Pre-meal Average:** 0.0 mg/dL
+- **Baseline Glucose (30min avg):** 0.0 mg/dL
+- **Glucose at Meal Time:** 0.0 mg/dL
+- **3h Pre-meal CV:** 0.0%
+- **1h Pre-meal CV:** 0.0%
+
+## 📈 Reference Meals from Same Time Slot (Last 7 Days)
+**Total Reference Meals Found:** 3
+
+
+### Reference Meal #1: Tomato Cucumber Salad , Sprouts Salad
+**Date/Time:** 2025-04-18 at 20:30
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 79.75 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 149.13 mg/dL
+- Time to Peak: 104.0 minutes
+- 3h Post-meal Average: 133.95 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 10.46%
+
+
+### Reference Meal #2: nan
+**Date/Time:** 2025-04-17 at 20:47
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 69.61 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 207.93 mg/dL
+- Time to Peak: 177.0 minutes
+- 3h Post-meal Average: 149.02 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 26.77%
+
+
+### Reference Meal #3: nan
+**Date/Time:** 2025-04-16 at 21:21
+
+**Pre-meal Metrics:**
+- Baseline Glucose: 134.59 mg/dL
+
+**Post-meal Impact (3h window):**  
+- Peak Glucose: 185.55 mg/dL
+- Time to Peak: 113.0 minutes
+- 3h Post-meal Average: 151.54 mg/dL
+- Return to Baseline: Did not return to baseline within 3h
+- **3h Post-meal CV:** 14.58%
+
+"

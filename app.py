@@ -7,7 +7,7 @@ import threading
 import queue
 from datetime import datetime, timedelta
 from metrics import CGMMetricsCalculator
-from gemini_api import GeminiAPI
+#from gemini_api import GeminiAPI
 from PIL import Image
 import time
 import base64
@@ -426,6 +426,13 @@ with tab3:
                 # Get the selected row
                 selected_idx = image_options.index(selected_image)
                 selected_row = results_df.iloc[selected_idx]
+                
+                # ✅ Display the meal image
+                image_path = f"images/{selected_row['image_name']}"
+                if os.path.exists(image_path):
+                    st.image(image_path, caption=f"📷 {selected_row['image_name']}", width=400)
+                else:
+                    st.warning(f"⚠️ Image file not found: {image_path}")
                 
                 # ✅ Show insights first
                 st.header("🤖 Generated Insights")

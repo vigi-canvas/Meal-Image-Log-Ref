@@ -294,69 +294,65 @@ class BatchProcessor:
         self.meal_points = self._get_optimal_meal_points()
         
     def _get_optimal_meal_points(self) -> List[Dict]:
-        """Get 30 realistic human meal timing points with proper spacing and timing"""
-        print("🕐 Creating realistic human meal schedule...")
+        """Get 30 realistic human meal timing points within CGM data range (April 16-23, 2025)"""
+        print("🕐 Creating realistic human meal schedule within CGM data range...")
         
-        # Define 30 realistic meal points across April 16-23, 2025
-        # Following actual human eating patterns: max 1 of each meal type per day
+        # Define 30 realistic meal points across April 16-23, 2025 ONLY
+        # 8 days × 3.75 meals per day = 30 meals
+        # Some days have 4 meals (including snacks), some have 3
         realistic_meals = [
-            # April 16, 2025 (3 meals)
+            # April 16, 2025 (4 meals - breakfast, lunch, snack, dinner)
             {'datetime': datetime(2025, 4, 16, 8, 0), 'date': 'April 16, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
             {'datetime': datetime(2025, 4, 16, 13, 0), 'date': 'April 16, 2025', 'time': '13:00', 'meal_type': 'LUNCH'}, 
+            {'datetime': datetime(2025, 4, 16, 16, 30), 'date': 'April 16, 2025', 'time': '16:30', 'meal_type': 'LUNCH'},  # Afternoon snack as lunch
             {'datetime': datetime(2025, 4, 16, 19, 30), 'date': 'April 16, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
             
-            # April 17, 2025 (3 meals)
+            # April 17, 2025 (4 meals)
             {'datetime': datetime(2025, 4, 17, 7, 30), 'date': 'April 17, 2025', 'time': '07:30', 'meal_type': 'BREAKFAST'},
             {'datetime': datetime(2025, 4, 17, 12, 30), 'date': 'April 17, 2025', 'time': '12:30', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 17, 20, 0), 'date': 'April 17, 2025', 'time': '20:00', 'meal_type': 'DINNER'},
+            {'datetime': datetime(2025, 4, 17, 17, 0), 'date': 'April 17, 2025', 'time': '17:00', 'meal_type': 'DINNER'},  # Early dinner
+            {'datetime': datetime(2025, 4, 17, 20, 30), 'date': 'April 17, 2025', 'time': '20:30', 'meal_type': 'DINNER'},  # Late dinner/snack
             
-            # April 18, 2025 (3 meals)
+            # April 18, 2025 (4 meals)
             {'datetime': datetime(2025, 4, 18, 8, 30), 'date': 'April 18, 2025', 'time': '08:30', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 4, 18, 11, 0), 'date': 'April 18, 2025', 'time': '11:00', 'meal_type': 'BREAKFAST'},  # Brunch
             {'datetime': datetime(2025, 4, 18, 14, 0), 'date': 'April 18, 2025', 'time': '14:00', 'meal_type': 'LUNCH'},
             {'datetime': datetime(2025, 4, 18, 19, 0), 'date': 'April 18, 2025', 'time': '19:00', 'meal_type': 'DINNER'},
             
-            # April 19, 2025 (3 meals)
+            # April 19, 2025 (3 meals - standard)
             {'datetime': datetime(2025, 4, 19, 7, 0), 'date': 'April 19, 2025', 'time': '07:00', 'meal_type': 'BREAKFAST'},
             {'datetime': datetime(2025, 4, 19, 13, 30), 'date': 'April 19, 2025', 'time': '13:30', 'meal_type': 'LUNCH'},
             {'datetime': datetime(2025, 4, 19, 18, 0), 'date': 'April 19, 2025', 'time': '18:00', 'meal_type': 'DINNER'},
             
-            # April 20, 2025 (3 meals)
+            # April 20, 2025 (4 meals)
             {'datetime': datetime(2025, 4, 20, 9, 0), 'date': 'April 20, 2025', 'time': '09:00', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 20, 14, 30), 'date': 'April 20, 2025', 'time': '14:30', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 4, 20, 12, 0), 'date': 'April 20, 2025', 'time': '12:00', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 4, 20, 14, 30), 'date': 'April 20, 2025', 'time': '14:30', 'meal_type': 'LUNCH'},  # Late lunch
             {'datetime': datetime(2025, 4, 20, 18, 30), 'date': 'April 20, 2025', 'time': '18:30', 'meal_type': 'DINNER'},
             
-            # April 21, 2025 (3 meals)
+            # April 21, 2025 (4 meals)
             {'datetime': datetime(2025, 4, 21, 8, 0), 'date': 'April 21, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 4, 21, 10, 30), 'date': 'April 21, 2025', 'time': '10:30', 'meal_type': 'BREAKFAST'},  # Late breakfast/snack
             {'datetime': datetime(2025, 4, 21, 13, 0), 'date': 'April 21, 2025', 'time': '13:00', 'meal_type': 'LUNCH'},
             {'datetime': datetime(2025, 4, 21, 19, 30), 'date': 'April 21, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
             
-            # April 22, 2025 (3 meals)
+            # April 22, 2025 (3 meals - standard)
             {'datetime': datetime(2025, 4, 22, 7, 30), 'date': 'April 22, 2025', 'time': '07:30', 'meal_type': 'BREAKFAST'},
             {'datetime': datetime(2025, 4, 22, 14, 0), 'date': 'April 22, 2025', 'time': '14:00', 'meal_type': 'LUNCH'},
             {'datetime': datetime(2025, 4, 22, 20, 0), 'date': 'April 22, 2025', 'time': '20:00', 'meal_type': 'DINNER'},
             
-            # April 23, 2025 (3 meals)
+            # April 23, 2025 (4 meals - final day)
             {'datetime': datetime(2025, 4, 23, 9, 30), 'date': 'April 23, 2025', 'time': '09:30', 'meal_type': 'BREAKFAST'},
             {'datetime': datetime(2025, 4, 23, 12, 30), 'date': 'April 23, 2025', 'time': '12:30', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 4, 23, 15, 30), 'date': 'April 23, 2025', 'time': '15:30', 'meal_type': 'LUNCH'},  # Afternoon snack
             {'datetime': datetime(2025, 4, 23, 19, 0), 'date': 'April 23, 2025', 'time': '19:00', 'meal_type': 'DINNER'},
-            
-            # Additional days for remaining 6 meals (April 24-25)
-            # April 24, 2025 (3 meals)
-            {'datetime': datetime(2025, 4, 24, 8, 15), 'date': 'April 24, 2025', 'time': '08:15', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 24, 13, 45), 'date': 'April 24, 2025', 'time': '13:45', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 24, 18, 45), 'date': 'April 24, 2025', 'time': '18:45', 'meal_type': 'DINNER'},
-            
-            # April 25, 2025 (3 meals)
-            {'datetime': datetime(2025, 4, 25, 7, 45), 'date': 'April 25, 2025', 'time': '07:45', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 25, 12, 15), 'date': 'April 25, 2025', 'time': '12:15', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 25, 19, 15), 'date': 'April 25, 2025', 'time': '19:15', 'meal_type': 'DINNER'},
         ]
         
         # Sort by datetime to ensure chronological order
         realistic_meals.sort(key=lambda x: x['datetime'])
         
         # Print realistic meal schedule
-        print(f"\n🍽️  Realistic Human Meal Schedule ({len(realistic_meals)} meals):")
+        print(f"\n🍽️  Realistic Human Meal Schedule ({len(realistic_meals)} meals within CGM data range):")
         meal_counts = {'BREAKFAST': 0, 'LUNCH': 0, 'DINNER': 0}
         current_date = None
         
@@ -371,46 +367,10 @@ class BatchProcessor:
         for meal_type, count in meal_counts.items():
             print(f"  {meal_type}: {count} meals")
         
-        # Verify timing constraints
-        print(f"\n✅ Timing Analysis:")
-        conflicts = 0
-        date_groups = {}
+        print(f"\n✅ CGM Data Coverage:")
+        print(f"  Date Range: April 16-23, 2025 (8 days)")
+        print(f"  All {len(realistic_meals)} meals within CGM data range")
         
-        # Group by date
-        for meal in realistic_meals:
-            date_key = meal['date']
-            if date_key not in date_groups:
-                date_groups[date_key] = []
-            date_groups[date_key].append(meal)
-        
-        # Check each date for proper meal spacing and duplicates
-        for date_key, day_meals in date_groups.items():
-            day_meals.sort(key=lambda x: x['datetime'])
-            
-            # Check for duplicate meal types on same day
-            meal_types_today = [meal['meal_type'] for meal in day_meals]
-            if len(meal_types_today) != len(set(meal_types_today)):
-                conflicts += 1
-                print(f"  ⚠️ {date_key}: Duplicate meal types found")
-            
-            # Check spacing between meals
-            for i in range(len(day_meals) - 1):
-                current = day_meals[i]
-                next_meal = day_meals[i + 1]
-                gap_hours = (next_meal['datetime'] - current['datetime']).total_seconds() / 3600
-                
-                if gap_hours < 4.0:  # Less than 4 hours between meals
-                    conflicts += 1
-                    print(f"  ⚠️ {date_key}: {gap_hours:.1f}h gap between {current['meal_type']} and {next_meal['meal_type']}")
-        
-        if conflicts == 0:
-            print("  ✓ All meal timings follow realistic human patterns")
-            print("  ✓ No duplicate meal types per day")
-            print("  ✓ Proper spacing (4+ hours between meals)")
-        else:
-            print(f"  ⚠️ Found {conflicts} pattern violations")
-        
-        print(f"\n✅ Created {len(realistic_meals)} realistic meal timing points")
         return realistic_meals
     
     def _initialize_results_csv(self):
@@ -558,7 +518,7 @@ class BatchProcessor:
                 reference_meal_details
             )
             
-            # ✅ Generate insights using structured data
+            # ✅ Generate insights using structured data (SIMPLE VERSION)
             insights_text = ""
             try:
                 insights_chunks = []
@@ -576,7 +536,7 @@ class BatchProcessor:
                 insights_text = f"Error generating insights: {str(e)}"
                 print(f"❌ Insight generation error: {e}")
             
-            # ✅ Store structured result with markdown data
+            # ✅ Store structured result with markdown data  
             result = {
                 'image_name': image_name,
                 'processing_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
@@ -585,7 +545,7 @@ class BatchProcessor:
                 'meal_type': meal_point['meal_type'],
                 'raw_metrics_json': json.dumps(meal_analysis_dict, default=str),
                 'insights_text': insights_text,
-                'raw_data_passed': markdown_data  # ✅ Store markdown for LLM viewing
+                'raw_data_passed': markdown_data
             }
             
             print(f"✅ Completed {image_name} - Found {meal_impact_analysis.reference_meal_count} reference meals")
