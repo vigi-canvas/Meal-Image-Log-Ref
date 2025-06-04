@@ -27,7 +27,7 @@ Your output should feel like a friendly check-in from a coach. The insight shoul
 - Proceed as-is (proceed_as_is)
 - Food Sequencing (food-sequencing) (Suggest a meal eating sequence that will be best for their glucose. Eg:- "Try eating salad first, then take a small break and have the rest")
 - Activity (activity) (Some pre-meal or post-meal activity to control glucose levels)
-- Hydration or Beverage Choices (hydration) (Opting for extra hydration or non-sugary beverages or diluted ACV ~5ml in water)
+- Hydration or Beverage Choices (hydration) (Opting for extra hydration or non-sugary beverages or diluted Apple Cider Vinegar ~5ml in water)
 - Cautionary Alert (cautionary_alert) (If food choice has chances of causing really significant glucose rise such as more than 120-150 mg/dL rise or chances of peak going beyond 250 mg/dL or so)
 
 Pass recommendation as one of the above categories.

@@ -409,12 +409,15 @@ class BatchProcessor:
                 if not food_df.empty:
                     food_df['datetime'] = pd.to_datetime(food_df['date'] + ' ' + food_df['time'])
                     
-                    # Filter for same slot in last 7 days
+                    # Filter for same slot in last 7 days BUT NOT CURRENT DATE
                     seven_days_ago = meal_datetime - timedelta(days=7)
+                    current_date = meal_datetime.date()
+                    
                     same_slot_meals = food_df[
                         (food_df['slot'] == meal_type) &
                         (food_df['datetime'] >= seven_days_ago) &
-                        (food_df['datetime'] < meal_datetime)
+                        (food_df['datetime'] < meal_datetime) &
+                        (food_df['datetime'].dt.date != current_date)  # ✅ EXCLUDE CURRENT DATE
                     ]
                     
                     # Convert to list of dicts
@@ -432,11 +435,15 @@ class BatchProcessor:
                 patterns = self.analyzer.detect_glucose_rise_patterns(df, min_rise=15)
                 
                 seven_days_ago = meal_datetime - timedelta(days=7)
+                current_date = meal_datetime.date()
+                
                 for pattern in patterns:
                     pattern_datetime = pattern['datetime']
+                    pattern_date = pattern_datetime.date()
                     
                     if (pattern['meal_type'] == meal_type and 
-                        seven_days_ago <= pattern_datetime < meal_datetime):
+                        seven_days_ago <= pattern_datetime < meal_datetime and
+                        pattern_date != current_date):  # ✅ EXCLUDE CURRENT DATE
                         reference_meals.append({
                             'date': pattern['date'],
                             'time': pattern['time'],
