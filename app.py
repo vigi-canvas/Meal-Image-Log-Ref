@@ -372,53 +372,92 @@ with tab3:
     st.markdown("View previously processed meal insights with detailed analysis")
     
     results_csv = "batch_results.csv"
+    
+    # ✅ Initialize session state for meal selection FIRST
+    if 'selected_meal_index' not in st.session_state:
+        st.session_state.selected_meal_index = 0
+    if 'meal_selection_made' not in st.session_state:
+        st.session_state.meal_selection_made = False
+    
     if os.path.exists(results_csv):
-        results_df = pd.read_csv(results_csv)
-        
-        if not results_df.empty:
-            st.success(f"📄 Found {len(results_df)} processed meals")
+        try:
+            results_df = pd.read_csv(results_csv)
             
-            # ✅ Create dropdown for image selection
-            image_options = ["Select a meal to view details..."]  # Default option
-            for idx, row in results_df.iterrows():
-                option_label = f"{row['image_name']} - {row['meal_type']} on {row['meal_date']} at {row['meal_time']}"
-                image_options.append(option_label)
-            
-            selected_image = st.selectbox(
-                "🍽️ Select a processed meal to view details:",
-                options=image_options,
-                index=0  # Default to first option (instruction text)
-            )
-            
-            # Only show content if an actual meal is selected
-            if selected_image != "Select a meal to view details...":
-                # Get the selected row
-                selected_idx = image_options.index(selected_image) - 1  # Subtract 1 for default option
-                selected_row = results_df.iloc[selected_idx]
+            if not results_df.empty and len(results_df) > 0:
+                st.success(f"📄 Found {len(results_df)} processed meals")
                 
-                # ✅ Display the meal image only after selection
-                image_path = f"images/{selected_row['image_name']}"
-                if os.path.exists(image_path):
-                    st.image(image_path, caption=f"📷 {selected_row['image_name']}", width=400)
+                # ✅ Create dropdown for image selection
+                image_options = ["Select a meal to view details..."]  # Default option
+                for idx, row in results_df.iterrows():
+                    try:
+                        option_label = f"{row['image_name']} - {row['meal_type']} on {row['meal_date']} at {row['meal_time']}"
+                        image_options.append(option_label)
+                    except:
+                        continue
+                
+                # Only proceed if we have valid options
+                if len(image_options) > 1:
+                    selected_image = st.selectbox(
+                        "🍽️ Select a processed meal to view details:",
+                        options=image_options,
+                        index=st.session_state.selected_meal_index,
+                        key="meal_selector"
+                    )
+                    
+                    # Update session state when selection changes
+                    current_index = image_options.index(selected_image)
+                    if current_index != st.session_state.selected_meal_index:
+                        st.session_state.selected_meal_index = current_index
+                        st.session_state.meal_selection_made = (current_index > 0)
+                    
+                    # ✅ STRICT CONDITIONS: Only show content if EXPLICITLY selected AND valid
+                    if (selected_image != "Select a meal to view details..." and 
+                        st.session_state.selected_meal_index > 0 and 
+                        st.session_state.meal_selection_made and
+                        st.session_state.selected_meal_index < len(results_df) + 1):
+                        
+                        try:
+                            # Get the selected row
+                            selected_idx = st.session_state.selected_meal_index - 1  # Subtract 1 for default option
+                            selected_row = results_df.iloc[selected_idx]
+                            
+                            # ✅ Display the meal image only after explicit selection
+                            image_path = f"images/{selected_row['image_name']}"
+                            if os.path.exists(image_path):
+                                st.image(image_path, caption=f"📷 {selected_row['image_name']}", width=400)
+                            else:
+                                st.warning(f"⚠️ Image file not found: {image_path}")
+                            
+                            # ✅ Show insights
+                            st.header("🤖 Generated Insights")
+                            if pd.notna(selected_row['insights_text']) and selected_row['insights_text'].strip():
+                                st.markdown(selected_row['insights_text'])
+                            else:
+                                st.info("No insights available for this meal")
+                            
+                            # ✅ Show raw data passed to LLM
+                            if 'raw_data_passed' in selected_row and pd.notna(selected_row['raw_data_passed']):
+                                st.header("📊 Raw Data Passed to LLM") 
+                                st.markdown(selected_row['raw_data_passed'])
+                            else:
+                                st.info("Raw data not available for this meal")
+                                
+                        except Exception as e:
+                            st.error("Error loading meal details. Please try selecting another meal.")
+                            st.session_state.selected_meal_index = 0
+                            st.session_state.meal_selection_made = False
+                    else:
+                        # Show instruction when nothing is selected or default option is selected
+                        st.info("👆 Please select a meal from the dropdown above to view its insights and analysis")
                 else:
-                    st.warning(f"⚠️ Image file not found: {image_path}")
-                
-                # ✅ Show insights first
-                st.header("🤖 Generated Insights")
-                st.markdown(selected_row['insights_text'])
-                
-                # ✅ Show raw data passed to LLM (this has everything!)
-                if 'raw_data_passed' in selected_row and pd.notna(selected_row['raw_data_passed']):
-                    st.header("📊 Raw Data Passed to LLM") 
-                    st.markdown(selected_row['raw_data_passed'])
-                else:
-                    st.info("Raw data not available for this meal")
+                    st.warning("No valid meal data found in results file.")
             else:
-                # Show instruction when nothing is selected
-                st.info("👆 Please select a meal from the dropdown above to view its insights and analysis")
-            
-        else:
-            st.info("No results found. Run batch processing first.")
+                st.info("No results found. Run batch processing first.")
+                
+        except Exception as e:
+            st.error("Error reading results file. Please upload a valid batch_results.csv file.")
+            st.session_state.selected_meal_index = 0
+            st.session_state.meal_selection_made = False
     else:
         st.info("No results file found. Run batch processing first.")
         
@@ -431,8 +470,11 @@ with tab3:
         )
         
         if uploaded_csv is not None:
-            # Save uploaded file
-            with open("batch_results.csv", "wb") as f:
-                f.write(uploaded_csv.getbuffer())
-            st.success("✅ File uploaded successfully! Please refresh the page to view results.")
-            st.rerun()
+            try:
+                # Save uploaded file
+                with open("batch_results.csv", "wb") as f:
+                    f.write(uploaded_csv.getbuffer())
+                st.success("✅ File uploaded successfully! Please refresh the page to view results.")
+                st.rerun()
+            except Exception as e:
+                st.error("Error uploading file. Please try again.")
