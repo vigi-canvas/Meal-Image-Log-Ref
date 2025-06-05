@@ -7,34 +7,35 @@ import json
 #load_dotenv()
 
 system_prompt = """
-You are a warm, supportive health coach specializing in diabetes and CGM-based food insights.
-Your role is to generate a short, personalized insight (max 3–4 sentences) for the current meal the user is about to eat, mostly Indian cuisine, based on:
-Their meal image analysis (carb/protein/fat & calories estimates)
+You are a warm and supportive health coach specializing in diabetes management with CGM-based food insights. Your role is to generate a short, personalized insight (3–4 sentences) about the meal the user is about to eat (mostly Indian cuisine), based on:
+Meal image analysis: Identify all dishes and ingredients, estimate portion sizes (using standard Indian measures, e.g., 1 katori, 1 bowl, 1 tbsp), and calculate macros (carbs, protein, fat) and calories.
+Recent CGM trends (past 7 days).
+Similar past meals and their glucose impact.
+User profile (goals, HbA1c, conditions, medications).
 
-Recent CGM trends (past 7 days)
+Process:
+Analyze the meal image to identify and disambiguate the dishes and estimate their quantities and nutrition.
+Combine these estimates with the user's CGM trends and historical meal responses to generate a personalized insight.
 
-Similar meals in the past and their glucose impact
+Insight Style:
+Friendly, compassionate, and empowering (like a caring coach check-in).
+Reference past glucose patterns (e.g., "last time this meal caused a 90 mg/dL spike") to provide context.
+Encourage small positive steps and reassure the user; make them feel understood, not judged.
 
-User profile context (goals, HbA1c, conditions, medications)
+Recommendations:
+Choose one category for guidance:
+- swap_meal: Suggest swapping or substituting meals/ingredients.
+- reduce_portion: Suggest reducing portion size.
+- increase_add_macro: Suggest adding a specific macronutrient.
+- proceed_as_is: Suggest proceeding with the meal as-is.
+- food_sequence: Suggest a meal eating sequence (e.g., eat a salad first, pause, then the rest).
+- activity: Suggest a pre- or post-meal activity to help control glucose.
+- hydration: Suggest drinking water or a non-sugary beverage (e.g., diluted apple cider vinegar).
+- cautionary_alert: Warn if this meal could cause a very high glucose spike (e.g., >120–150 mg/dL rise).
 
-Process :
-For food image analysis, identify and disambiguate the dishes and ingredients, estimate calories and macro, and use the same with CGM data and historical data to provide a personalized insight.
-
-Your output should feel like a friendly check-in from a coach. The insight should gently guide the user on what to do as per following categories:
-- Swap/Substitute Meals/Ingredients (swap_meal)
-- Reduce Portion (reduce_portion)
-- Increase/Add specific macro (increase_add_macro)
-- Proceed as-is (proceed_as_is)
-- Food Sequencing (food-sequencing) (Suggest a meal eating sequence that will be best for their glucose. Eg:- "Try eating salad first, then take a small break and have the rest")
-- Activity (activity) (Some pre-meal or post-meal activity to control glucose levels)
-- Hydration or Beverage Choices (hydration) (Opting for extra hydration or non-sugary beverages or diluted Apple Cider Vinegar ~5ml in water)
-- Cautionary Alert (cautionary_alert) (If food choice has chances of causing really significant glucose rise such as more than 120-150 mg/dL rise or chances of peak going beyond 250 mg/dL or so)
-
-Pass recommendation as one of the above categories.
-
-Reference past patterns (e.g., "last time this caused a 90 mg/dL spike"), and connect that meaningfully to this meal. Encourage even small positive behaviors and help the user feel understood, not judged.
-
-IMPORTANT: Respond with ONLY the JSON object, no markdown formatting, no code fences, no additional text.
+Output Format:
+Important: Respond with only the JSON object, no additional text or markdown.
+Include a dishes field: An array of objects, each with "name" (dish name) and "quantity" (estimated portion, e.g., "1 katori", "1 bowl").
 
 Format your response as a valid JSON object:
 {
@@ -43,38 +44,48 @@ Format your response as a valid JSON object:
     "protein_g": 0,
     "fat_g": 0
   },
-  "estimated_calories" : 0,
-  "core_insight": "Short, personalized insight here (max 3–4 sentences).",
-  "recommendation": "swap" | "reduce_portion" | "proceed_as_is"
+  "dishes": [
+    {"name": "curd", "quantity": "1 katori"},
+    {"name": "rice", "quantity": "1 bowl"}
+  ],
+  "estimated_calories": 0,
+  "core_insight": "Short, personalized insight here (3–4 sentences).",
+  "recommendation": "swap_meal"
 }
 
-Keep it friendly, compassionate, and empowering — like talking to someone managing diabetes with care.
+Keep the tone friendly, compassionate, and empowering—like talking to someone managing diabetes with care.
 """
 
 user_profile = """
 User Profile :
-Name: Neera
-User: 25-year-old female
-Weight: 75-78 kg
-Activity Level: Sedentary
+Name: Alex
+User: 28-year-old individual
+Weight: 65-68 kg
+Activity Level: Moderately active
 Known Conditions:
-- Diabetes (on Ryzodeg 30/70 insulin)
-- Hypothyroidism (on Thyronorm 75mcg - TSH 0.571, controlled)
+- Type 1 Diabetes (on insulin therapy)
+- Recurrent hypoglycemia episodes
 
-Key Issues for Dietary Intervention (based on latest data):
-- Severe Glycemic Imbalance:
-    - HbA1c: 8.8% (despite insulin)
-    - Fasting Glucose: 191 mg/dL
-    - Random Glucose: 205.86 mg/dL
-- Nutritional Concerns:
-    - Mild Anemia: Hb 12 g/dL (MCHC 31.8, MCH 26.1)
-    - Elevated ESR: 34 mm/hr (inflammation marker)
-- Supplements: On A TO Z Gold multivitamin.
+Key Issues for Dietary Intervention (based on CGM data analysis):
+- Frequent Hypoglycemic Episodes:
+    - Mean glucose: 83.5 mg/dL (on lower end of normal)
+    - 10% of readings below 70 mg/dL (hypoglycemia)
+    - 0.2% severe hypoglycemia below 54 mg/dL
+    - Lowest recorded: 40.0 mg/dL (dangerous low)
+- Good Overall Control:
+    - 90% Time in Range (70-180 mg/dL) - excellent
+    - No hyperglycemia (max 116.4 mg/dL)
+    - Well-controlled when not hypoglycemic
+- Risk Factors:
+    - Frequent glucose drops, especially post-meal periods
+    - Need for hypoglycemia prevention strategies
 
 Primary Dietetic Goals for this User:
-- Improve blood sugar control significantly.
-- Address anemia through diet and support inflammation reduction.
-- Support weight management efforts.
+- Prevent hypoglycemic episodes through strategic meal timing and composition
+- Maintain stable glucose levels without causing hypoglycemia
+- Focus on complex carbohydrates and protein for sustained energy
+- Optimize pre-meal glucose levels to prevent post-meal drops
+- Educate on recognizing and managing hypoglycemia warning signs
 """
 
 class GeminiAPI:
@@ -197,13 +208,48 @@ class GeminiAPI:
             contents=contents,
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
-                temperature=0.4,
+                temperature=0.7
             )
         )
 
         async for chunk in response:
-            if hasattr(chunk, 'text') and chunk.text:
+            if chunk.text:
                 yield chunk.text
+
+    async def get_insights_simple(self, choice, current_meal_metrics, reference_meals_metrics, meal_image, current_meal_details, reference_meal_details):
+        """Fast non-streaming version for single image analysis"""
+        # Format data to markdown for structured presentation
+        markdown_data = self.format_meal_data_to_markdown(
+            current_meal_metrics, 
+            reference_meals_metrics, 
+            current_meal_details, 
+            reference_meal_details
+        )
+        
+        # Create prompt with formatted markdown context
+        prompt = f"""
+        {user_profile}
+        
+        {markdown_data}
+        
+        Please analyze this meal image along with the provided CGM data and meal context to provide comprehensive insights.
+        """
+        
+        # Prepare contents for the API call
+        contents = [prompt, meal_image]
+        model = self.GEMINI_PRO_MODEL if choice == "pro" else self.GEMINI_FLASH_MODEL
+        
+        # Get complete response at once (faster for single images)
+        response = await self.client.aio.models.generate_content(
+            model=model,
+            contents=contents,
+            config=types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                temperature=0.7
+            )
+        )
+        
+        return response.text if response.text else "No insights generated"
     
     def get_formatted_data_for_frontend(self, current_meal_metrics, reference_meals_metrics, current_meal_details, reference_meal_details):
         """

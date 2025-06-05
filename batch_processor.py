@@ -278,7 +278,7 @@ class MealTimingAnalyzer:
 class BatchProcessor:
     """Processes multiple meal images with CGM insights"""
     
-    def __init__(self, user_id: str = "100022075"):
+    def __init__(self, user_id: str = "101679328"):
         self.user_id = user_id
         self.cgm_path = f"{user_id}/CGM.csv"
         self.food_path = f"{user_id}/Food.csv"
@@ -294,58 +294,62 @@ class BatchProcessor:
         self.meal_points = self._get_optimal_meal_points()
         
     def _get_optimal_meal_points(self) -> List[Dict]:
-        """Get 30 realistic human meal timing points within CGM data range (April 16-23, 2025)"""
+        """Get 30 realistic human meal timing points within CGM data range (March 15-29, 2025)"""
         print("🕐 Creating realistic human meal schedule within CGM data range...")
         
-        # Define 30 realistic meal points across April 16-23, 2025 ONLY
-        # 8 days × 3.75 meals per day = 30 meals
-        # Some days have 4 meals (including snacks), some have 3
+        # Define 30 realistic meal points across March 15-29, 2025 (15 days)
+        # 10 days × 3 meals per day = 30 meals
+        # Realistic breakfast (7-9am), lunch (12-2pm), dinner (6-8pm) timings
         realistic_meals = [
-            # April 16, 2025 (4 meals - breakfast, lunch, snack, dinner)
-            {'datetime': datetime(2025, 4, 16, 8, 0), 'date': 'April 16, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 16, 13, 0), 'date': 'April 16, 2025', 'time': '13:00', 'meal_type': 'LUNCH'}, 
-            {'datetime': datetime(2025, 4, 16, 16, 30), 'date': 'April 16, 2025', 'time': '16:30', 'meal_type': 'LUNCH'},  # Afternoon snack as lunch
-            {'datetime': datetime(2025, 4, 16, 19, 30), 'date': 'April 16, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
+            # March 16, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 16, 8, 0), 'date': 'March 16, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 16, 13, 0), 'date': 'March 16, 2025', 'time': '13:00', 'meal_type': 'LUNCH'}, 
+            {'datetime': datetime(2025, 3, 16, 19, 30), 'date': 'March 16, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
             
-            # April 17, 2025 (4 meals)
-            {'datetime': datetime(2025, 4, 17, 7, 30), 'date': 'April 17, 2025', 'time': '07:30', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 17, 12, 30), 'date': 'April 17, 2025', 'time': '12:30', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 17, 17, 0), 'date': 'April 17, 2025', 'time': '17:00', 'meal_type': 'DINNER'},  # Early dinner
-            {'datetime': datetime(2025, 4, 17, 20, 30), 'date': 'April 17, 2025', 'time': '20:30', 'meal_type': 'DINNER'},  # Late dinner/snack
+            # March 17, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 17, 7, 30), 'date': 'March 17, 2025', 'time': '07:30', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 17, 12, 30), 'date': 'March 17, 2025', 'time': '12:30', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 17, 18, 0), 'date': 'March 17, 2025', 'time': '18:00', 'meal_type': 'DINNER'},
             
-            # April 18, 2025 (4 meals)
-            {'datetime': datetime(2025, 4, 18, 8, 30), 'date': 'April 18, 2025', 'time': '08:30', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 18, 11, 0), 'date': 'April 18, 2025', 'time': '11:00', 'meal_type': 'BREAKFAST'},  # Brunch
-            {'datetime': datetime(2025, 4, 18, 14, 0), 'date': 'April 18, 2025', 'time': '14:00', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 18, 19, 0), 'date': 'April 18, 2025', 'time': '19:00', 'meal_type': 'DINNER'},
+            # March 18, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 18, 8, 30), 'date': 'March 18, 2025', 'time': '08:30', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 18, 14, 0), 'date': 'March 18, 2025', 'time': '14:00', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 18, 19, 0), 'date': 'March 18, 2025', 'time': '19:00', 'meal_type': 'DINNER'},
             
-            # April 19, 2025 (3 meals - standard)
-            {'datetime': datetime(2025, 4, 19, 7, 0), 'date': 'April 19, 2025', 'time': '07:00', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 19, 13, 30), 'date': 'April 19, 2025', 'time': '13:30', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 19, 18, 0), 'date': 'April 19, 2025', 'time': '18:00', 'meal_type': 'DINNER'},
+            # March 19, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 19, 7, 0), 'date': 'March 19, 2025', 'time': '07:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 19, 13, 30), 'date': 'March 19, 2025', 'time': '13:30', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 19, 20, 0), 'date': 'March 19, 2025', 'time': '20:00', 'meal_type': 'DINNER'},
             
-            # April 20, 2025 (4 meals)
-            {'datetime': datetime(2025, 4, 20, 9, 0), 'date': 'April 20, 2025', 'time': '09:00', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 20, 12, 0), 'date': 'April 20, 2025', 'time': '12:00', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 20, 14, 30), 'date': 'April 20, 2025', 'time': '14:30', 'meal_type': 'LUNCH'},  # Late lunch
-            {'datetime': datetime(2025, 4, 20, 18, 30), 'date': 'April 20, 2025', 'time': '18:30', 'meal_type': 'DINNER'},
+            # March 20, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 20, 9, 0), 'date': 'March 20, 2025', 'time': '09:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 20, 12, 0), 'date': 'March 20, 2025', 'time': '12:00', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 20, 18, 30), 'date': 'March 20, 2025', 'time': '18:30', 'meal_type': 'DINNER'},
             
-            # April 21, 2025 (4 meals)
-            {'datetime': datetime(2025, 4, 21, 8, 0), 'date': 'April 21, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 21, 10, 30), 'date': 'April 21, 2025', 'time': '10:30', 'meal_type': 'BREAKFAST'},  # Late breakfast/snack
-            {'datetime': datetime(2025, 4, 21, 13, 0), 'date': 'April 21, 2025', 'time': '13:00', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 21, 19, 30), 'date': 'April 21, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
+            # March 21, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 21, 8, 0), 'date': 'March 21, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 21, 13, 0), 'date': 'March 21, 2025', 'time': '13:00', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 21, 19, 30), 'date': 'March 21, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
             
-            # April 22, 2025 (3 meals - standard)
-            {'datetime': datetime(2025, 4, 22, 7, 30), 'date': 'April 22, 2025', 'time': '07:30', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 22, 14, 0), 'date': 'April 22, 2025', 'time': '14:00', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 22, 20, 0), 'date': 'April 22, 2025', 'time': '20:00', 'meal_type': 'DINNER'},
+            # March 22, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 22, 7, 30), 'date': 'March 22, 2025', 'time': '07:30', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 22, 14, 0), 'date': 'March 22, 2025', 'time': '14:00', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 22, 20, 0), 'date': 'March 22, 2025', 'time': '20:00', 'meal_type': 'DINNER'},
             
-            # April 23, 2025 (4 meals - final day)
-            {'datetime': datetime(2025, 4, 23, 9, 30), 'date': 'April 23, 2025', 'time': '09:30', 'meal_type': 'BREAKFAST'},
-            {'datetime': datetime(2025, 4, 23, 12, 30), 'date': 'April 23, 2025', 'time': '12:30', 'meal_type': 'LUNCH'},
-            {'datetime': datetime(2025, 4, 23, 15, 30), 'date': 'April 23, 2025', 'time': '15:30', 'meal_type': 'LUNCH'},  # Afternoon snack
-            {'datetime': datetime(2025, 4, 23, 19, 0), 'date': 'April 23, 2025', 'time': '19:00', 'meal_type': 'DINNER'},
+            # March 23, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 23, 9, 30), 'date': 'March 23, 2025', 'time': '09:30', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 23, 12, 30), 'date': 'March 23, 2025', 'time': '12:30', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 23, 19, 0), 'date': 'March 23, 2025', 'time': '19:00', 'meal_type': 'DINNER'},
+            
+            # March 24, 2025 (3 meals)
+            {'datetime': datetime(2025, 3, 24, 8, 0), 'date': 'March 24, 2025', 'time': '08:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 24, 13, 30), 'date': 'March 24, 2025', 'time': '13:30', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 24, 18, 0), 'date': 'March 24, 2025', 'time': '18:00', 'meal_type': 'DINNER'},
+            
+            # March 25, 2025 (3 meals - final day)
+            {'datetime': datetime(2025, 3, 25, 7, 0), 'date': 'March 25, 2025', 'time': '07:00', 'meal_type': 'BREAKFAST'},
+            {'datetime': datetime(2025, 3, 25, 12, 0), 'date': 'March 25, 2025', 'time': '12:00', 'meal_type': 'LUNCH'},
+            {'datetime': datetime(2025, 3, 25, 19, 30), 'date': 'March 25, 2025', 'time': '19:30', 'meal_type': 'DINNER'},
         ]
         
         # Sort by datetime to ensure chronological order
@@ -368,7 +372,7 @@ class BatchProcessor:
             print(f"  {meal_type}: {count} meals")
         
         print(f"\n✅ CGM Data Coverage:")
-        print(f"  Date Range: April 16-23, 2025 (8 days)")
+        print(f"  Date Range: March 15-29, 2025 (15 days)")
         print(f"  All {len(realistic_meals)} meals within CGM data range")
         
         return realistic_meals

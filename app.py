@@ -40,7 +40,7 @@ with tab1:
     st.markdown("- Pre-meal glucose trend analysis")
     st.markdown("- Reference meal comparisons")
     
-    # # st.markdown("Upload a meal image and get real-time CGM insights")
+    # st.markdown("Upload a meal image and get real-time CGM insights")
     # 
     # # Model selection as buttons with icons
     # st.markdown("**🤖 Select AI Model:**")
@@ -96,7 +96,7 @@ with tab1:
     #         help="Select the type of meal for appropriate CGM comparison"
     #     )
     #
-    # user_id = "100022075"  # Fixed user ID
+    # user_id = "101679328"  # Updated user ID
     #
     # @st.cache_data  
     # def load_cgm_data(user_id):
@@ -126,48 +126,31 @@ with tab1:
     #
     # def optimized_stream_insights(gemini_api, model_choice, current_meal_metrics, reference_meals_metrics, 
     #                             meal_image, current_meal_details, reference_meal_details):
-    #     """Optimized streaming function"""
+    #     """Simplified streaming function for faster insights"""
     #     try:
-    #         import asyncio
+    #         # Simple direct call to get insights without complex async management
+    #         loop = asyncio.new_event_loop()
+    #         asyncio.set_event_loop(loop)
     #         
-    #         async def get_insights():
-    #             insights = ""
+    #         async def get_insights_simple():
+    #             insights_text = ""
     #             async for chunk in gemini_api.get_insights_stream(
     #                 choice=model_choice,
     #                 current_meal_metrics=current_meal_metrics,
     #                 reference_meals_metrics=reference_meals_metrics,
     #                 meal_image=meal_image,
-    #             current_meal_details=current_meal_details,
-    #             reference_meal_details=reference_meal_details
-    #         ):
-    #                 insights += chunk
+    #                 current_meal_details=current_meal_details,
+    #                 reference_meal_details=reference_meal_details
+    #             ):
+    #                 insights_text += chunk
     #                 yield chunk
+    #             
+    #         # Run the simplified async generator
+    #         async_gen = get_insights_simple()
     #         
-    #         # Use asyncio.run() properly without manual loop management
-    #         async def run_generator():
-    #             all_chunks = []
-    #             async for chunk in get_insights():
-    #                 all_chunks.append(chunk)
-    #                 yield chunk
-    #             
-    #         # Run the async generator in a clean way
-    #         try:
-    #             loop = asyncio.get_event_loop()
-    #         except RuntimeError:
-    #             loop = asyncio.new_event_loop()
-    #             asyncio.set_event_loop(loop)
-    #             
-    #         async def stream_all():
-    #             result = []
-    #             async for chunk in run_generator():
-    #                 result.append(chunk)
-    #                 yield chunk
-    #                 
-    #         # Convert to sync generator
-    #         gen = stream_all()
     #         while True:
     #             try:
-    #                 chunk = loop.run_until_complete(gen.__anext__())
+    #                 chunk = loop.run_until_complete(async_gen.__anext__())
     #                 yield chunk
     #             except StopAsyncIteration:
     #                 break
@@ -272,6 +255,28 @@ with tab1:
     #                 insights_text = ""
     #                 
     #                 try:
+    #                     # Use faster non-streaming approach for single images
+    #                     with st.spinner("🤖 Generating AI insights..."):
+    #                         loop = asyncio.new_event_loop()
+    #                         asyncio.set_event_loop(loop)
+    #                         
+    #                         # Get insights all at once (faster than streaming for single images)
+    #                         insights_text = loop.run_until_complete(
+    #                             gemini_api.get_insights_simple(
+    #                                 choice=selected_model,
+    #                                 current_meal_metrics=meal_analysis_dict,
+    #                                 reference_meals_metrics=meal_analysis_dict["reference_meals"],
+    #                                 meal_image=meal_image,
+    #                                 current_meal_details=current_meal_details,
+    #                                 reference_meal_details=reference_meal_details
+    #                             )
+    #                         )
+    #                         
+    #                     # Display the complete insights at once
+    #                     insights_placeholder.markdown(insights_text)
+    #                     
+    #                 except AttributeError:
+    #                     # Fallback to streaming if get_insights_simple doesn't exist
     #                     for chunk in optimized_stream_insights(
     #                         gemini_api, selected_model, meal_analysis_dict,
     #                         meal_analysis_dict["reference_meals"],
@@ -374,7 +379,7 @@ with tab3:
             st.success(f"📄 Found {len(results_df)} processed meals")
             
             # ✅ Create dropdown for image selection
-            image_options = []
+            image_options = ["Select a meal to view details..."]  # Default option
             for idx, row in results_df.iterrows():
                 option_label = f"{row['image_name']} - {row['meal_type']} on {row['meal_date']} at {row['meal_time']}"
                 image_options.append(option_label)
@@ -382,15 +387,16 @@ with tab3:
             selected_image = st.selectbox(
                 "🍽️ Select a processed meal to view details:",
                 options=image_options,
-                index=0 if image_options else None
+                index=0  # Default to first option (instruction text)
             )
             
-            if selected_image:
+            # Only show content if an actual meal is selected
+            if selected_image != "Select a meal to view details...":
                 # Get the selected row
-                selected_idx = image_options.index(selected_image)
+                selected_idx = image_options.index(selected_image) - 1  # Subtract 1 for default option
                 selected_row = results_df.iloc[selected_idx]
                 
-                # ✅ Display the meal image
+                # ✅ Display the meal image only after selection
                 image_path = f"images/{selected_row['image_name']}"
                 if os.path.exists(image_path):
                     st.image(image_path, caption=f"📷 {selected_row['image_name']}", width=400)
@@ -407,6 +413,9 @@ with tab3:
                     st.markdown(selected_row['raw_data_passed'])
                 else:
                     st.info("Raw data not available for this meal")
+            else:
+                # Show instruction when nothing is selected
+                st.info("👆 Please select a meal from the dropdown above to view its insights and analysis")
             
         else:
             st.info("No results found. Run batch processing first.")
